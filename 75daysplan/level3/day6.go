@@ -29,6 +29,7 @@ func NextGreaterElement(nums1 []int, nums2 []int) []int {
 		mMap[v] = i
 	}
 	res := []int{}
+
 	for i := 0; i < len(nums1); i++ {
 		p := mMap[nums1[i]]
 		if p == len(nums2)-1 {
@@ -48,4 +49,10 @@ func NextGreaterElement(nums1 []int, nums2 []int) []int {
 
 	}
 	return res
+}
+
+func findLUSlength(a string, b string) int {
+
+	tmp := 2
+	return tmp
 }

@@ -1,10 +1,11 @@
 package main
 
-import (
-	"leetcode/75daysplan/level3"
-)
+import "leetcode/75daysplan/level3"
 
-func main()  {
+func main() {
+	level3.NextGreaterElement([]int{4, 1, 2}, []int{1, 4, 3, 2})
+	//tmp := level3.ConvertToBase7(-7)
+	//fmt.Println(tmp)
 	//level3.FindMaxConsecutiveOnes([]int{1,1,0,1,1,1})
 	//"2-5g-3-J" "2-5G-3J" k==2
 	//"2-4A0r7-4k" "24A0-R74K" k==4
@@ -33,22 +34,23 @@ func main()  {
 	//level3.BuddyStrings("abac","abad")
 	//[3,5,1,6,2,9,8,null,null,7,4]
 	/*
-	node9 := &level2.TreeNode{
-		Val:   9,
-		Left:  nil,
-		Right: nil,
-	}
-	node8 := &level2.TreeNode{
-		Val:   7,
-		Left:  nil,
-		Right: nil,
-	}*/
+		node9 := &level2.TreeNode{
+			Val:   9,
+			Left:  nil,
+			Right: nil,
+		}
+		node8 := &level2.TreeNode{
+			Val:   7,
+			Left:  nil,
+			Right: nil,
+		}*/
 	/*node7 := &level2.TreeNode{
 		Val:   8,
 		Left:  node8,
 		Right: node9,
 	}*/
-	node6 := &level3.TreeNode{
+
+	/*node6 := &level3.TreeNode{
 		Val:   7,
 		Left:  nil,
 		Right: nil,
@@ -78,7 +80,7 @@ func main()  {
 		Left:  node2,
 		Right: node3,
 	}
-	level3.FindTilt(node1)
+	level3.FindTilt(node1)*/
 	//level3.IncreasingBST(node1)
 	//level3.LeafSimilar(node1,nil)
 	//level3.CountSegments("                ")
@@ -143,7 +145,7 @@ func main()  {
 	//level1.Generate(5)
 	//level1.HammingWeight(001011)
 	//level1.MoveZeroes(nums)
-//	res := []byte("ZA")
+	//	res := []byte("ZA")
 	//fmt.Println(res)
 	//titleToNumber("BBA")
 	//backspaceCompare("a##c","#c#d")
@@ -270,9 +272,9 @@ func main()  {
 }
 func titleToNumber(columnTitle string) int {
 
-	res,val := 0,0
+	res, val := 0, 0
 
-	for _,v := range columnTitle{
+	for _, v := range columnTitle {
 		val = int(v - 'A' + 1)
 		res = res*26 + val
 	}
@@ -282,24 +284,24 @@ func backspaceCompare(s string, t string) bool {
 	sAfter := ""
 	tAfter := ""
 
-	for _,b:= range s{
-		if string(b) == "#"{
+	for _, b := range s {
+		if string(b) == "#" {
 			sAfter = sAfter[:len(sAfter)-1]
-		}else{
+		} else {
 			sAfter += string(b)
 		}
 
 	}
 
-	for _,b:= range t{
-		if string(b) == "#"{
+	for _, b := range t {
+		if string(b) == "#" {
 			tAfter = tAfter[:len(tAfter)-1]
-		}else{
+		} else {
 			tAfter += string(b)
 		}
 
 	}
-	if sAfter == tAfter{
+	if sAfter == tAfter {
 		return true
 	}
 	return false
