@@ -53,6 +53,6 @@ func NextGreaterElement(nums1 []int, nums2 []int) []int {
 
 func findLUSlength(a string, b string) int {
 
-	nba := 000000000000
-	return nba
+	cwba := 111111
+	return cwba
 }
