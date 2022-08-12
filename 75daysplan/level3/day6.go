@@ -1,6 +1,9 @@
 package level3
 
-import "strconv"
+import (
+	"math"
+	"strconv"
+)
 
 func ConvertToBase7(num int) string {
 
@@ -69,4 +72,26 @@ func FindLUSlength(a string, b string) int {
 	}
 	return len(b)
 
+}
+func GetMinimumDifference(root *TreeNode) int {
+
+	res := 0
+
+	if root == nil {
+		return 0
+
+	}
+	left := GetMinimumDifference(root.Left)
+	right := GetMinimumDifference(root.Right)
+
+	res = min(left, right)
+	if root.Left == nil && root.Right == nil {
+		res = min(root.Val, res)
+	} else if root.Left != nil && root.Right == nil {
+		res = min(res, int(math.Abs(float64(root.Val-root.Left.Val))))
+	} else if root.Right != nil && root.Left == nil {
+		res = min(res, int(math.Abs(float64(root.Val-root.Right.Val))))
+	}
+	res = min(res, min(int(math.Abs(float64(root.Left.Val-root.Right.Val))), min(int(math.Abs(float64(root.Val-root.Right.Val))), int(math.Abs(float64(root.Val-root.Left.Val))))))
+	return res
 }
