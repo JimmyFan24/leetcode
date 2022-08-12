@@ -51,8 +51,22 @@ func NextGreaterElement(nums1 []int, nums2 []int) []int {
 	return res
 }
 
-func findLUSlength(a string, b string) int {
+/*
+Example 1:
 
-	testjimmy := 12345678
-	return testjimmy
+Input: a = "aba", b = "cdc"
+Output: 3
+Explanation: One longest uncommon subsequence is "aba" because "aba" is a subsequence of "aba" but not "cdc".
+Note that "cdc" is also a longest uncommon subsequence.
+*/
+func FindLUSlength(a string, b string) int {
+	//abcde  bcde
+	if a == b {
+		return -1
+	}
+	if len(a) > len(b) {
+		return len(a)
+	}
+	return len(b)
+
 }

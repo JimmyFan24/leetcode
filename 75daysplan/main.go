@@ -1,11 +1,15 @@
 package main
 
-import "leetcode/75daysplan/level3"
+import (
+	"fmt"
+	"leetcode/75daysplan/level3"
+)
 
 func main() {
-	level3.NextGreaterElement([]int{4, 1, 2}, []int{1, 4, 3, 2})
+	tmp := level3.FindLUSlength("ab", "cc")
+	//level3.NextGreaterElement([]int{4, 1, 2}, []int{1, 4, 3, 2})
 	//tmp := level3.ConvertToBase7(-7)
-	//fmt.Println(tmp)
+	fmt.Println(tmp)
 	//level3.FindMaxConsecutiveOnes([]int{1,1,0,1,1,1})
 	//"2-5g-3-J" "2-5G-3J" k==2
 	//"2-4A0r7-4k" "24A0-R74K" k==4
