@@ -1,15 +1,26 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/75daysplan/level3"
-)
+import "leetcode/75daysplan/level3"
 
 func main() {
-	tmp := level3.FindLUSlength("ab", "cc")
+	level3.SubsetXORSum([]int{1, 3})
+	//level3.RemovePalindromeSub("ababb")
+	//level3.MergeAlternately("ab", "nba")
+	//level3.CountOperations(2, 3)
+	//level3.NumberOfPairs([]int{1, 3, 2, 1, 3, 2, 2})
+	//level3.SumZero(4)
+	//level3.CountPoints("B0R0G0R9R0B0G0")
+	//level3.LargestLocal([][]int{{9, 9, 8, 1}, {5, 6, 2, 6}, {8, 2, 6, 4}, {6, 2, 2, 2}})
+	//level3.UniqueMorseRepresentations([]string{"gin", "zen", "gig", "msg"})
+	//level3.CountConsistentStrings("ab", []string{"ad", "bd", "aaab", "baa", "badab"})
+	//level3.CellsInRange("K1:L2")
+	//level3.SumOddLengthSubarrays([]int{1, 4, 2, 5, 3})
+	//level3.DecodeMessage("eljuxhpwnyrdgtqkviszcfmabo", "vkbs bs t suepuv")
+	//level3.ArithmeticTriplets([]int{4, 5, 6, 7, 8, 9}, 2)
+	//tmp := level3.FindLUSlength("ab", "cc")
 	//level3.NextGreaterElement([]int{4, 1, 2}, []int{1, 4, 3, 2})
 	//tmp := level3.ConvertToBase7(-7)
-	fmt.Println(tmp)
+	//fmt.Println(tmp)
 	//level3.FindMaxConsecutiveOnes([]int{1,1,0,1,1,1})
 	//"2-5g-3-J" "2-5G-3J" k==2
 	//"2-4A0r7-4k" "24A0-R74K" k==4
