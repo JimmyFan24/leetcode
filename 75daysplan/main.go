@@ -3,7 +3,7 @@ package main
 import "leetcode/75daysplan/level3"
 
 func main() {
-	level3.SubsetXORSum([]int{1, 3})
+	level3.SubsetXORSum([]int{5, 1, 6})
 	//level3.RemovePalindromeSub("ababb")
 	//level3.MergeAlternately("ab", "nba")
 	//level3.CountOperations(2, 3)

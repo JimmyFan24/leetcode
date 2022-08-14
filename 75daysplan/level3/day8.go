@@ -1,6 +1,7 @@
 package level3
 
 import (
+	"math"
 	"sort"
 	"strconv"
 )
@@ -475,21 +476,74 @@ func isPalindrome(s string) bool {
 func SubsetXORSum(nums []int) int {
 
 	sum := 0
+	res := [][]int{}
+	for i := 1; i <= len(nums); i++ {
+		tmp := []int{}
+		getSubsetSum(nums, 0, 0, i, tmp, &res)
+	}
 
-	for i := 1; i < len(nums); i++ {
-		getSubsetSum(nums, 0, 0, i, &sum)
+	for _, v := range res {
+		tsum := 0
+		for _, b := range v {
+			tsum ^= b
+		}
+		sum += tsum
 	}
 	return sum
 }
-func getSubsetSum(nums []int, start, count, index int, sum *int) {
+func getSubsetSum(nums []int, start, count, index int, tmp []int, res *[][]int) {
 	if index == count {
-
+		c := make([]int, len(tmp))
+		copy(c, tmp)
+		*res = append(*res, c)
 		return
 	}
-
 	for j := start; j < len(nums); j++ {
-		*sum += *sum ^ nums[j]
-		getSubsetSum(nums, j+1, count+1, index, sum)
+		tmp = append(tmp, nums[j])
+		getSubsetSum(nums, j+1, count+1, index, tmp, res)
+		tmp = tmp[:len(tmp)-1]
 	}
 	return
+}
+func CountKDifference(nums []int, k int) int {
+
+	i := 0
+	count := 0
+	for ; i < len(nums)-1; i++ {
+
+		for j := i; j < len(nums); j++ {
+
+			if int(math.Abs(float64(nums[i]-nums[j]))) == k {
+				count++
+			}
+		}
+	}
+	return count
+}
+func SearchBST(root *TreeNode, val int) *TreeNode {
+
+	if root == nil {
+		return nil
+	}
+	if root.Val == val {
+		return root
+	} else if root.Val < val {
+		return SearchBST(root.Left, val)
+	}
+	return SearchBST(root.Right, val)
+}
+func AreOccurrencesEqual(s string) bool {
+	sMap := make(map[rune]int, 26)
+
+	for _, v := range s {
+		sMap[v]++
+	}
+
+	value := []int{}
+	for _, v := range s {
+		value = append(value, sMap[v])
+	}
+	sort.Ints(value)
+	return value[0] == value[len(value)-1]
+
 }
