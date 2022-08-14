@@ -3,7 +3,15 @@ package main
 import "leetcode/75daysplan/level3"
 
 func main() {
-	level3.SubsetXORSum([]int{5, 1, 6})
+	level3.CountGoodSubstrings("xyzzaz")
+	//level3.MaximumUnits([][]int{{2,1},{4,4},{3,1},{4,1},{2,4},{3,4},{1,3},{4,3},{5,3},{5,3}},13)
+	//level3.LargestAltitude([]int{-4,-3,-2,-1,4,3,2})
+	//level3.CountLargestGroup(13)
+	//level3.RepeatedCharacter("abccbaacz")
+	//level3.CountGoodTriplets([]int{3,0,1,1,9,7},7,2,3)
+	//level3.LastStoneWeight([]int{2,7,4,1,8,1})
+	//level3.RemoveDuplicates("aababaab")
+	//level3.SubsetXORSum([]int{5, 1, 6})
 	//level3.RemovePalindromeSub("ababb")
 	//level3.MergeAlternately("ab", "nba")
 	//level3.CountOperations(2, 3)
