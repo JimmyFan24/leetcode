@@ -429,6 +429,6 @@ func kthDistinct(arr []string, k int) string {
 }
 
 func SumRootToLeaf(root *TreeNode) int {
-
+	//1 1*2+5*2
 	return 0
 }
