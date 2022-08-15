@@ -434,3 +434,348 @@ func SumRootToLeaf(root *TreeNode) int {
 	return nba
 
 }
+
+/*
+Example 1:
+
+Input: grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]
+Output: 8
+Explanation: There are 8 negatives number in the matrix.
+*/
+func CountNegatives(grid [][]int) int {
+	count := 0
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[0]); j++ {
+			if grid[i][j] < 0 {
+				count++
+			}
+		}
+	}
+	return count
+}
+
+func JudgeCircle(moves string) bool {
+
+	m := make(map[rune]int, 4)
+	for _, v := range moves {
+		m[v]++
+	}
+	return m['L'] == m['R'] && m['U'] == m['D']
+}
+
+func FinalPrices(prices []int) []int {
+
+	res := make([]int, len(prices))
+	for i := 0; i < len(prices); i++ {
+		j := i + 1
+		for j < len(prices) {
+			if prices[j] > prices[i] {
+				j++
+			} else {
+				break
+			}
+
+		}
+		if (j == len(prices)-1 && prices[j] > prices[i]) || j == len(prices) {
+			res[i] = prices[i]
+		} else if j < len(prices) {
+			res[i] = prices[i] - prices[j]
+		}
+
+	}
+	return res
+}
+
+type NewNode struct {
+	Val      int
+	Children []*NewNode
+}
+
+func Postorder(root *NewNode) []int {
+
+	if root == nil {
+		return nil
+	}
+	res := []int{}
+
+	for _, node := range root.Children {
+
+		nList := Postorder(node)
+		if len(nList) > 1 {
+			for _, v := range nList {
+				res = append(res, v)
+			}
+		} else if len(nList) == 1 {
+			res = append(res, node.Val)
+		}
+
+	}
+	res = append(res, root.Val)
+	return res
+}
+
+/*
+Example 1:
+
+Input: nums = [1,1,1]
+Output: 3
+Explanation: You can do the following operations:
+1) Increment nums[2], so nums becomes [1,1,2].
+2) Increment nums[1], so nums becomes [1,2,2].
+3) Increment nums[2], so nums becomes [1,2,3].
+*/
+func MinOperations(nums []int) int {
+
+	count := 0
+
+	if len(nums) <= 1 {
+		count = 0
+	}
+
+	for i := 0; i < len(nums)-1; i++ {
+		j := i + 1
+		for nums[j] <= nums[i] {
+			nums[j]++
+			count++
+		}
+
+	}
+
+	return count
+}
+
+func ReplaceElements(arr []int) []int {
+
+	res := make([]int, len(arr))
+	max := arr[len(arr)-1]
+	for i := len(arr) - 2; i >= 0; i-- {
+		//[17,18,5,4,6,1]
+		//[0,6,0,0,1,-1]
+		if arr[i] > max {
+			res[i] = max
+			max = arr[i]
+			continue
+		}
+		res[i] = max
+
+	}
+	res[len(res)-1] = -1
+	return res
+}
+
+/*
+Example 1:
+
+Input: items1 = [[1,1],[4,5],[3,8]], items2 = [[3,1],[1,5]]
+Output: [[1,6],[3,9],[4,5]]
+Explanation:
+The item with value = 1 occurs in items1 with weight = 1 and in items2 with weight = 5, total weight = 1 + 5 = 6.
+The item with value = 3 occurs in items1 with weight = 8 and in items2 with weight = 1, total weight = 8 + 1 = 9.
+The item with value = 4 occurs in items1 with weight = 5, total weight = 5.
+Therefore, we return [[1,6],[3,9],[4,5]].
+*/
+func MergeSimilarItems(items1 [][]int, items2 [][]int) [][]int {
+	res := [][]int{}
+
+	/*
+
+		[[1,1],[4,5],[3,8]]
+		[[3,1],[1,5]]
+	*/
+	for len(items1) > 0 && len(items2) > 0 {
+
+		if items1[0][0] < items2[0][0] {
+			q := 0
+			for ; q < len(items2); q++ {
+				if items2[q][0] == items1[0][0] {
+					break
+				}
+			}
+			if q < len(items2) {
+				res = append(res, []int{items1[0][0], items1[0][1] + items2[q][1]})
+				if q == len(items2)-1 {
+					items2 = items2[:q]
+				} else {
+					tmp := items2[q+1:]
+					items2 = items2[:q]
+					for _, v := range tmp {
+						items2 = append(items2, v)
+					}
+				}
+			} else {
+				res = append(res, []int{items1[0][0], items1[0][1]})
+			}
+			items1 = items1[1:]
+
+		} else {
+			p := 0
+			for ; p < len(items1); p++ {
+				if items1[p][0] == items2[0][0] {
+					break
+				}
+			}
+			if p < len(items1) {
+				res = append(res, []int{items2[0][0], items2[0][1] + items1[p][1]})
+
+				if p == len(items1)-1 {
+					items1 = items1[:p]
+				} else {
+					tmp := items1[p+1:]
+					items1 = items1[:p]
+					for _, v := range tmp {
+						items1 = append(items1, v)
+					}
+				}
+			} else {
+				res = append(res, []int{items2[0][0], items2[0][1]})
+			}
+			items2 = items2[1:]
+		}
+
+	}
+	for len(items1) > 0 {
+		res = append(res, []int{items1[0][0], items1[0][1]})
+		items1 = items1[1:]
+	}
+	for len(items2) > 0 {
+		res = append(res, []int{items2[0][0], items2[0][1]})
+		items2 = items2[1:]
+	}
+	return res
+}
+
+func IsUnivalTree(root *TreeNode) bool {
+
+	if root == nil {
+		return true
+	}
+	if root.Left != nil && root.Right != nil {
+		return IsUnivalTree(root.Left) &&
+			IsUnivalTree(root.Right) &&
+			root.Val == root.Left.Val &&
+			root.Val == root.Right.Val
+	} else if root.Left != nil && root.Right == nil {
+		return IsUnivalTree(root.Left) &&
+			root.Val == root.Left.Val
+	} else if root.Left == nil && root.Right != nil {
+		return IsUnivalTree(root.Right) &&
+			root.Val == root.Right.Val
+	}
+	return true
+
+}
+
+func CountWords(words1 []string, words2 []string) int {
+
+	m1 := make(map[string]int, len(words1))
+	m2 := make(map[string]int, len(words2))
+
+	for _, v := range words1 {
+		m1[v]++
+	}
+	for _, v := range words2 {
+		m2[v]++
+	}
+	count := 0
+	for _, v := range words1 {
+
+		if m1[v] == 1 && m2[v] == 1 {
+			count++
+		}
+	}
+	return count
+
+}
+
+/*
+Input: root = [3,9,20,null,null,15,7]
+Output: [3.00000,14.50000,11.00000]
+Explanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.
+Hence return [3, 14.5, 11].
+*/
+func AverageOfLevels(root *TreeNode) []float64 {
+	queue := []*TreeNode{root}
+	res := []float64{}
+	for len(queue) > 0 {
+		sum := 0
+		l := len(queue)
+		for i := 0; i < l; i++ {
+			if queue[i].Left != nil {
+				queue = append(queue, queue[i].Left)
+			}
+			if queue[i].Right != nil {
+				queue = append(queue, queue[i].Right)
+			}
+			sum += queue[i].Val
+		}
+
+		avr := float64(sum) / float64(l)
+		res = append(res, avr)
+		queue = queue[l:]
+
+	}
+	return res
+}
+
+/*
+Example 1:
+
+Input: nums1 = [1,2,3], nums2 = [2,4,6]
+Output: [[1,3],[4,6]]
+Explanation:
+For nums1, nums1[1] = 2 is present at index 0 of nums2,
+whereas nums1[0] = 1 and nums1[2] = 3 are not present in nums2. Therefore, answer[0] = [1,3].
+For nums2, nums2[0] = 2 is present at index 1 of nums1,
+whereas nums2[1] = 4 and nums2[2] = 6 are not present in nums2. Therefore, answer[1] = [4,6].
+*/
+func FindDifference(nums1 []int, nums2 []int) [][]int {
+
+	m1 := make(map[int]int, len(nums1))
+	m2 := make(map[int]int, len(nums2))
+	for _, v := range nums1 {
+		m1[v]++
+	}
+	for _, v := range nums2 {
+		m2[v]++
+	}
+	res := [][]int{}
+	t1 := []int{}
+	for _, v := range nums1 {
+		if m1[v] >= 1 && m2[v] >= 1 {
+			continue
+		} else if m1[v] >= 1 {
+			t1 = append(t1, v)
+			delete(m1, v)
+
+		}
+	}
+	res = append(res, t1)
+	t2 := []int{}
+	for _, v := range nums2 {
+		if m1[v] >= 1 && m2[v] >= 1 {
+			continue
+		} else if m2[v] >= 1 {
+			t2 = append(t2, v)
+			delete(m2, v)
+
+		}
+	}
+	res = append(res, t2)
+	return res
+}
+
+/*
+Example 1:
+
+Input: s = "lEeTcOdE"
+Output: "E"
+Explanation:
+The letter 'E' is the only letter to appear in both lower and upper case.
+*/
+func GreatestLetter(s string) string {
+
+	return ""
+}
+func toLower(s rune) rune {
+	return 'a' + (s - 'A')
+}

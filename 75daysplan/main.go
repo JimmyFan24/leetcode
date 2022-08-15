@@ -3,7 +3,13 @@ package main
 import "leetcode/75daysplan/level3"
 
 func main() {
-	level3.CountGoodSubstrings("xyzzaz")
+	level3.GreatestLetter(
+		"AAAA")
+	//level3.FindDifference([]int{1,2,3,3},[]int{1,1,2,2})
+	//level3.ReplaceElements([]int{17,18,5,4,6,1})
+	//level3.MinOperations([]int{1,5,2,4,1})
+	//level3.FinalPrices([]int{8,4,6,2,3})
+	//level3.CountGoodSubstrings("xyzzaz")
 	//level3.MaximumUnits([][]int{{2,1},{4,4},{3,1},{4,1},{2,4},{3,4},{1,3},{4,3},{5,3},{5,3}},13)
 	//level3.LargestAltitude([]int{-4,-3,-2,-1,4,3,2})
 	//level3.CountLargestGroup(13)
