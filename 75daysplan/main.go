@@ -3,8 +3,12 @@ package main
 import "leetcode/75daysplan/level3"
 
 func main() {
-	level3.GreatestLetter(
-		"AAAA")
+	level3.DivideString("abcdefghij", 3, 'x')
+	//level3.ConvertTime("09:41","10:34")
+	//level3.TrimMean([]int{1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3})
+	//level3.MaxDistance([]int{1,1,1,6,1,1,1})
+	//level3.DuplicateZeros([]int{1,0,2,3,0,4,5,9})
+	//level3.GreatestLetter( "AAAA")
 	//level3.FindDifference([]int{1,2,3,3},[]int{1,1,2,2})
 	//level3.ReplaceElements([]int{17,18,5,4,6,1})
 	//level3.MinOperations([]int{1,5,2,4,1})
