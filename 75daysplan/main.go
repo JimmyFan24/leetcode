@@ -1,9 +1,13 @@
 package main
 
-import "leetcode/75daysplan/level3"
+import "leetcode/75daysplan/level4"
 
 func main() {
-	level3.DivideString("abcdefghij", 3, 'x')
+	level4.IsSumEqual("abc", "cba", "cdb")
+	//level4.Maximum69Number(9969)
+	//level4.DiagonalSum([][]int{{1,2,3},{4,5,6},{7,8,9}})
+	//level4.NumOfStrings([]string{"a","abc","bc","d"},"abc")
+	//level3.DivideString("abcdefghij", 3, 'x')
 	//level3.ConvertTime("09:41","10:34")
 	//level3.TrimMean([]int{1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3})
 	//level3.MaxDistance([]int{1,1,1,6,1,1,1})
