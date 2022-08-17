@@ -3,7 +3,17 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.MinSubsequence([]int{10, 2, 5})
+	level4.LongestNiceSubstring("cChH")
+	//level4.CountGoodTriplets([]int{3,0,1,1,9,7},7,2,3)
+	//level4.MinBitFlips(10,82)
+	//level4.MaxDepth("(1+(2*3)+((8)/4))+1")
+	/*os := level4.CConstructor(5)
+	os.Insert(3,"ccccccc")
+	os.Insert(1,"aaaaaaa")
+	os.Insert(2,"bbbbbbb")
+	os.Insert(5,"eeeeeee")
+	os.Insert(4,"ddddddd")*/
+	//level4.MinSubsequence([]int{10, 2, 5})
 	//level4.CountBalls(11, 104)
 	/*c := level4.Constructor()
 	c1 := c.Ping(1)
