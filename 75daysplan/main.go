@@ -1,17 +1,16 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/75daysplan/level4"
-)
+import "leetcode/75daysplan/level4"
 
 func main() {
-	c := level4.Constructor()
+	level4.MinSubsequence([]int{10, 2, 5})
+	//level4.CountBalls(11, 104)
+	/*c := level4.Constructor()
 	c1 := c.Ping(1)
 	c2 := c.Ping(100)
 	c3 := c.Ping(3001)
 	c4 := c.Ping(3002)
-	fmt.Println(c1, c2, c3, c4)
+	fmt.Println(c1, c2, c3, c4)*/
 	//level4.SmallestEqual([]int{0,1,2})
 	//level4.TwoOutOfThree([]int{1,1,3,2}, []int{2,3}, []int{3})
 	//level4.CalPoints([]string{"5","2","C","D","+"})

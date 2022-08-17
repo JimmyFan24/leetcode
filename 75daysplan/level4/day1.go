@@ -1,6 +1,7 @@
 package level4
 
 import (
+	"math"
 	"sort"
 	"strconv"
 )
@@ -363,7 +364,6 @@ i=0: 0 mod 10 = 0 == nums[0].
 i=1: 1 mod 10 = 1 == nums[1].
 i=2: 2 mod 10 = 2 == nums[2].
 All indices have i mod 10 == nums[i], so we return the smallest index 0.
-
 */
 func SmallestEqual(nums []int) int {
 	index := -1
@@ -460,4 +460,47 @@ func KWeakestRows(mat [][]int, k int) []int {
 	}
 	return res
 
+}
+
+func CountBalls(lowLimit int, highLimit int) int {
+
+	n := highLimit - lowLimit + 1
+	m := make(map[int]int, n)
+	max := math.MinInt32
+	for i := lowLimit; i <= highLimit; i++ {
+
+		sum := 0
+		tmp := i
+		for tmp > 0 {
+			sum += tmp % 10
+			tmp /= 10
+		}
+		m[sum]++
+		if m[sum] > max {
+			max = m[sum]
+		}
+	}
+	return max
+
+}
+func MinSubsequence(nums []int) []int {
+
+	sort.Ints(nums)
+	sum := 0
+	for _, v := range nums {
+		sum += v
+	}
+	tmp := []int{}
+	bigger := 0
+	for i := len(nums) - 1; i >= 0; i-- {
+		others := sum - bigger
+		if others > bigger {
+
+			bigger += nums[i]
+			tmp = append(tmp, nums[i])
+		} else {
+			break
+		}
+	}
+	return tmp
 }
