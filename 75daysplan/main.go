@@ -1,9 +1,21 @@
 package main
 
-import "leetcode/75daysplan/level4"
+import (
+	"fmt"
+	"leetcode/75daysplan/level4"
+)
 
 func main() {
-	level4.IsSumEqual("abc", "cba", "cdb")
+	c := level4.Constructor()
+	c1 := c.Ping(1)
+	c2 := c.Ping(100)
+	c3 := c.Ping(3001)
+	c4 := c.Ping(3002)
+	fmt.Println(c1, c2, c3, c4)
+	//level4.SmallestEqual([]int{0,1,2})
+	//level4.TwoOutOfThree([]int{1,1,3,2}, []int{2,3}, []int{3})
+	//level4.CalPoints([]string{"5","2","C","D","+"})
+	//level4.IsSumEqual("abc", "cba", "cdb")
 	//level4.Maximum69Number(9969)
 	//level4.DiagonalSum([][]int{{1,2,3},{4,5,6},{7,8,9}})
 	//level4.NumOfStrings([]string{"a","abc","bc","d"},"abc")
