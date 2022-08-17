@@ -494,7 +494,7 @@ func MinSubsequence(nums []int) []int {
 	bigger := 0
 	for i := len(nums) - 1; i >= 0; i-- {
 		others := sum - bigger
-		if others > bigger {
+		if others >= bigger {
 
 			bigger += nums[i]
 			tmp = append(tmp, nums[i])

@@ -3,7 +3,7 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.MinSubsequence([]int{10, 2, 5})
+	level4.MinSubsequence([]int{4, 4, 7, 6, 7})
 	//level4.CountBalls(11, 104)
 	/*c := level4.Constructor()
 	c1 := c.Ping(1)
