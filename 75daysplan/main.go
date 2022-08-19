@@ -3,7 +3,56 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.MinSubsequence([]int{4, 4, 7, 6, 7})
+	level4.NearestValidPoint(1, 1, [][]int{{1, 1}, {1, 1}})
+	//level4.CountCharacters([]string{"cat", "bt", "hat"}, "atach")
+	//level4.CountCharacters([]string{"dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin", "ndqeyhhcquplmznwslewjzuyfgklssvkqxmqjpwhrshycmvrb", "ulrrbpspyudncdlbkxkrqpivfftrggemkpyjl", "boygirdlggnh", "xmqohbyqwagkjzpyawsydmdaattthmuvjbzwpyopyafphx", "nulvimegcsiwvhwuiyednoxpugfeimnnyeoczuzxgxbqjvegcxeqnjbwnbvowastqhojepisusvsidhqmszbrnynkyop", "hiefuovybkpgzygprmndrkyspoiyapdwkxebgsmodhzpx", "juldqdzeskpffaoqcyyxiqqowsalqumddcufhouhrskozhlmobiwzxnhdkidr", "lnnvsdcrvzfmrvurucrzlfyigcycffpiuoo", "oxgaskztzroxuntiwlfyufddl", "tfspedteabxatkaypitjfkhkkigdwdkctqbczcugripkgcyfezpuklfqfcsccboarbfbjfrkxp", "qnagrpfzlyrouolqquytwnwnsqnmuzphne", "eeilfdaookieawrrbvtnqfzcricvhpiv", "sisvsjzyrbdsjcwwygdnxcjhzhsxhpceqz", "yhouqhjevqxtecomahbwoptzlkyvjexhzcbccusbjjdgcfzlkoqwiwue", "hwxxighzvceaplsycajkhynkhzkwkouszwaiuzqcleyflqrxgjsvlegvupzqijbornbfwpefhxekgpuvgiyeudhncv", "cpwcjwgbcquirnsazumgjjcltitmeyfaudbnbqhflvecjsupjmgwfbjo", "teyygdmmyadppuopvqdodaczob", "qaeowuwqsqffvibrtxnjnzvzuuonrkwpysyxvkijemmpdmtnqxwekbpfzs", "qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs"}, "usdruypficfbpfbivlrhutcgvyjenlxzeovdyjtgvvfdjzcmikjraspdfp")
+	//level4.FindingUsersActiveMinutes([][]int{{1, 1}, {2, 2}, {2, 3}}, 4)
+	//level4.MinOperations(6)
+	//level4.BstFromPreorder([]int{8, 5, 1, 7, 10, 12})
+	/*code := level4.URLConstructor()
+	shorturl := code.Encode("https://baidu.com/1udbcdc")
+	url := code.Decode(shorturl)
+	fmt.Println(url)*/
+	/*node8 := &level4.ListNode{
+		Val:  0,
+		Next: nil,
+	}
+	node7 := &level4.ListNode{
+		Val:  2,
+		Next: node8,
+	}
+	node6 := &level4.ListNode{
+		Val:  5,
+		Next: node7,
+	}
+	node5 := &level4.ListNode{
+		Val:  0,
+		Next: node6,
+	}*/
+	/*node4 := &level4.ListNode{
+		Val:  4,
+		Next: nil,
+	}
+	node3 := &level4.ListNode{
+		Val:  4,
+		Next: node4,
+	}
+	node2 := &level4.ListNode{
+		Val:  0,
+		Next: node3,
+	}
+	level4.MergeNodes(node2)*/
+	//level4.LongestNiceSubstring("cChH")
+	//level4.CountGoodTriplets([]int{3,0,1,1,9,7},7,2,3)
+	//level4.MinBitFlips(10,82)
+	//level4.MaxDepth("(1+(2*3)+((8)/4))+1")
+	/*os := level4.CConstructor(5)
+	os.Insert(3,"ccccccc")
+	os.Insert(1,"aaaaaaa")
+	os.Insert(2,"bbbbbbb")
+	os.Insert(5,"eeeeeee")
+	os.Insert(4,"ddddddd")*/
+	//level4.MinSubsequence([]int{10, 2, 5})
 	//level4.CountBalls(11, 104)
 	/*c := level4.Constructor()
 	c1 := c.Ping(1)
@@ -112,23 +161,24 @@ func main() {
 		Val:   3,
 		Left:  nil,
 		Right: nil,
-	}
-	node3 := &level3.TreeNode{
+	}*/
+	/*node3 := &level4.TreeNode{
 		Val:   9,
 		Left:  nil,
-		Right: node6,
+		Right: nil,
 	}
-	node2 := &level3.TreeNode{
+	node2 := &level4.TreeNode{
+		Val:   1,
+		Left:  nil,
+		Right: nil,
+	}
+	node1 := &level4.TreeNode{
 		Val:   2,
-		Left:  node4,
-		Right: node5,
-	}
-	node1 := &level3.TreeNode{
-		Val:   4,
 		Left:  node2,
 		Right: node3,
 	}
-	level3.FindTilt(node1)*/
+	level4.BstToGst(node1)*/
+	//level3.FindTilt(node1)
 	//level3.IncreasingBST(node1)
 	//level3.LeafSimilar(node1,nil)
 	//level3.CountSegments("                ")
