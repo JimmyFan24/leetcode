@@ -1,15 +1,25 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/75daysplan/level4"
-)
+import "leetcode/75daysplan/level4"
 
 func main() {
-	code := level4.URLConstructor()
+	level4.IntervalIntersection([][]int{{3, 5}, {9, 20}}, [][]int{{4, 5}, {7, 10}, {11, 12}, {14, 15}, {16, 20}})
+	//level4.IntervalIntersection([][]int{{0,2},{5,10},{13,23},{24,25}},[][]int{{1,5},{8,12},{15,24},{25,26}})
+	//level4.ComplexNumberMultiply("78+-76i","-86+72i")
+	//level4.MinSteps("cotxazilut","nahrrmcchxwrieqqdwdpneitkxgnt")
+	/*sm := level4.NewConstructor()
+	sm.AddBack(32)
+	a := sm.PopSmallest()
+	b:= sm.PopSmallest()
+	c := sm.PopSmallest()
+	sm.AddBack(1)
+	fmt.Println(a,b,c)*/
+	//level4.QueensAttacktheKing([][]int{{0,0},{1,1},{2,2},{3,4},{3,5},{4,4},{4,5}},[]int{3,3})
+	//level4.MemLeak(2,2)
+	/*code := level4.URLConstructor()
 	shorturl := code.Encode("https://baidu.com/1udbcdc")
 	url := code.Decode(shorturl)
-	fmt.Println(url)
+	fmt.Println(url)*/
 	/*node8 := &level4.ListNode{
 		Val:  0,
 		Next: nil,
