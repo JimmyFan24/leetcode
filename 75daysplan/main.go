@@ -1,9 +1,45 @@
 package main
 
-import "leetcode/75daysplan/level4"
+import (
+	"fmt"
+	"leetcode/75daysplan/level4"
+)
 
 func main() {
-	level4.LongestNiceSubstring("cChH")
+	code := level4.URLConstructor()
+	shorturl := code.Encode("https://baidu.com/1udbcdc")
+	url := code.Decode(shorturl)
+	fmt.Println(url)
+	/*node8 := &level4.ListNode{
+		Val:  0,
+		Next: nil,
+	}
+	node7 := &level4.ListNode{
+		Val:  2,
+		Next: node8,
+	}
+	node6 := &level4.ListNode{
+		Val:  5,
+		Next: node7,
+	}
+	node5 := &level4.ListNode{
+		Val:  0,
+		Next: node6,
+	}
+	node4 := &level4.ListNode{
+		Val:  1,
+		Next: node5,
+	}
+	node3 := &level4.ListNode{
+		Val:  3,
+		Next: node4,
+	}
+	node2 := &level4.ListNode{
+		Val:  0,
+		Next: node3,
+	}
+	level4.MergeNodes(node2)*/
+	//level4.LongestNiceSubstring("cChH")
 	//level4.CountGoodTriplets([]int{3,0,1,1,9,7},7,2,3)
 	//level4.MinBitFlips(10,82)
 	//level4.MaxDepth("(1+(2*3)+((8)/4))+1")
