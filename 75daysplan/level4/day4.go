@@ -2,197 +2,288 @@ package level4
 
 import (
 	"math"
+	"sort"
 )
 
-/*
-Example 1:
+func MemLeak(memory1 int, memory2 int) []int {
 
-Input: n = 6
-Output: 2
-Explanation: arr = [1,3,5,7,9,11]
-First operation choose x = 2 and y = 0, this leads arr to be [2, 3, 4]
-In the second operation choose x = 2 and y = 0 again, thus arr = [3, 3, 3].
-*/
-func MinOperations(n int) int {
+	res := []int{}
 
-	sum := 0
+	start := 1
+	for memory1 >= 0 && memory2 >= 0 {
 
-	for i := 0; i < n/2; i++ {
-
-		sum += n - (2*i + 1)
-	}
-	return sum
-
-}
-func FindingUsersActiveMinutes(logs [][]int, k int) []int {
-
-	answer := make([]int, k)
-	userMap := make(map[int]map[int]int, len(logs))
-
-	for _, v := range logs {
-
-		if _, ok := userMap[v[0]]; !ok {
-			minMap := make(map[int]int, len(logs))
-			minMap[v[1]]++
-			userMap[v[0]] = minMap
-
+		if memory1 >= memory2 {
+			if start <= memory1 {
+				memory1 -= start
+				start++
+			} else {
+				break
+			}
 		} else {
-			userMap[v[0]][v[1]]++
+			if start <= memory2 {
+				memory2 -= start
+				start++
+			} else {
+				break
+			}
 		}
-	}
 
-	uam := make(map[int]int, len(userMap))
-	for _, v := range userMap {
-		uam[len(v)]++
 	}
-	for k, v := range uam {
-		answer[k-1] = v
-	}
-	return answer
-
-}
-func BalanceBST(root *TreeNode) *TreeNode {
-
-	if root == nil {
-		return nil
-	}
-
-	//中序遍历
-	arr := inOrder(root)
-
-	return buildBST(arr, 0, len(arr)-1)
-}
-func buildBST(arr []*TreeNode, l, r int) *TreeNode {
-
-	if l > r {
-		return nil
-	}
-	mid := l + ((r - l) >> 1)
-	root := arr[mid]
-	root.Left = buildBST(arr, l, mid-1)
-	root.Right = buildBST(arr, mid+1, r)
-	return root
-}
-func inOrder(root *TreeNode) []*TreeNode {
-	if root == nil {
-		return nil
-	}
-	res := []*TreeNode{}
-	left := inOrder(root.Left)
-	for _, v := range left {
-		v.Left = nil
-		v.Right = nil
-		res = append(res, v)
-	}
-	res = append(res, root)
-	right := inOrder(root.Right)
-	for _, v := range right {
-		v.Left = nil
-		v.Right = nil
-		res = append(res, v)
-	}
+	res = []int{start, memory1, memory2}
 	return res
 }
-func insertRightNode(root, node *TreeNode) {
+func QueensAttacktheKing(queens [][]int, king []int) [][]int {
 
-	for root.Right != nil && node.Val > root.Right.Val {
-		root = root.Right
-	}
-	root.Right = node
-	node.Left = nil
-	node.Right = nil
+	canKill := [][]int{}
 
-}
-func insertLeftNode(root, node *TreeNode) {
-
-	for root.Left != nil && node.Val < root.Left.Val {
-		root = root.Left
-	}
-	root.Left = node
-	node.Left = nil
-	node.Right = nil
+	canKillRow(queens, king, &canKill)
+	canKillRal(queens, king, &canKill)
+	otherCanKill(queens, king, &canKill)
+	return canKill
 
 }
-func isBalanceBST(left, right *TreeNode) bool {
-	return int(math.Abs(float64(getDepth(left))-float64(getDepth(right)))) <= 1
+func canKillRow(queen [][]int, king []int, cankill *[][]int) {
 
-}
-func getDepth(root *TreeNode) int {
+	//1.先扫描行
+	rowRight := 8
+	rowLeft := -1
+	for _, v := range queen {
+		if v[0] == king[0] && v[1] > king[1] {
 
-	if root == nil {
-		return 0
-	}
-
-	return max(getDepth(root.Left), getDepth(root.Right)) + 1
-}
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func CountCharacters(words []string, chars string) int {
-
-	m := make(map[rune]int, 26)
-	for _, v := range chars {
-		m[v]++
-	}
-	res := 0
-	for _, word := range words {
-		tmp := make(map[rune]int, len(m))
-		for k, v := range m {
-			tmp[k] = v
-		}
-		if isGoodWord(word, tmp) && len(word) <= len(chars) {
-			res += len(word)
+			if rowRight > v[1] {
+				rowRight = v[1]
+			}
+		} else if v[0] == king[0] && v[1] < king[1] {
+			if rowLeft < v[1] {
+				rowLeft = v[1]
+			}
 		}
 	}
-	return res
-}
-func isGoodWord(word string, m map[rune]int) bool {
-
-	for _, v := range word {
-		if m[v] <= 0 {
-			return false
-		} else {
-			m[v]--
-		}
+	if rowRight != 8 {
+		*cankill = append(*cankill, []int{king[0], rowRight})
 	}
-	return true
+	if rowLeft != -1 {
+		*cankill = append(*cankill, []int{king[0], rowLeft})
+	}
+
 }
 
-func NearestValidPoint(x int, y int, points [][]int) int {
+func canKillRal(queen [][]int, king []int, cankill *[][]int) {
 
-	//1.find the usefulpoint
-	useful := [][]int{}
-	for _, point := range points {
-		if point[0] == x || point[1] == y {
-			useful = append(useful, point)
+	//扫描列
+	ralTop := -1
+	ralButtom := 8
+	for _, v := range queen {
+		if v[1] == king[1] && v[0] > king[0] {
+
+			if ralButtom > v[0] {
+				ralButtom = v[0]
+			}
+		} else if v[1] == king[1] && v[0] < king[0] {
+			if ralTop < v[0] {
+				ralTop = v[0]
+			}
 		}
 	}
-	//2.get manhadun distance
-	minDistance := math.MaxInt32
-	minPoint := []int{}
-	for _, use := range useful {
-		tmp := int(math.Abs(float64(use[0])-float64(x))) + int(math.Abs(float64(use[1])-float64(y)))
-		if tmp < minDistance {
+	if ralButtom != 8 {
+		*cankill = append(*cankill, []int{ralButtom, king[1]})
+	}
+	if ralTop != -1 {
+		*cankill = append(*cankill, []int{ralTop, king[1]})
+	}
 
-			minDistance = tmp
-			minPoint = use
-		} else if tmp == minDistance {
-			continue
+}
+func otherCanKill(queen [][]int, king []int, cankill *[][]int) {
+	//扫描列
+	leftTop := []int{-1, -1}
+	leftButtom := []int{8, -1}
+	rightTop := []int{-1, 8}
+	rightButtom := []int{8, 8}
+	for _, v := range queen {
+
+		//右下角
+		if v[0] > king[0] && v[1] > king[1] {
+			if canGetKing(v, king) {
+				if rightButtom[1] > v[1] {
+					rightButtom[0] = v[0]
+					rightButtom[1] = v[1]
+				}
+
+			}
+
+			//左上角
+		} else if v[0] < king[0] && v[1] < king[1] {
+			if canGetKing(v, king) {
+				if leftTop[1] < v[1] {
+					leftTop[0] = v[0]
+					leftTop[1] = v[1]
+				}
+
+			}
+			//右上角
+		} else if v[0] < king[0] && v[1] > king[1] {
+			if canGetKing(v, king) {
+				if rightTop[1] > v[1] {
+					rightTop[0] = v[0]
+					rightTop[1] = v[1]
+				}
+
+			}
+			//左下角
+		} else if v[0] > king[0] && v[1] < king[1] {
+			if canGetKing(v, king) {
+				if leftButtom[1] < v[1] {
+					leftButtom[0] = v[0]
+					leftButtom[1] = v[1]
+				}
+
+			}
+		}
+
+	}
+	if rightButtom[0] != 8 {
+		*cankill = append(*cankill, rightButtom)
+	}
+	if leftTop[1] != -1 {
+		*cankill = append(*cankill, leftTop)
+	}
+	if leftButtom[1] != -1 {
+		*cankill = append(*cankill, leftButtom)
+	}
+	if rightTop[0] != -1 {
+		*cankill = append(*cankill, rightTop)
+	}
+
+	*cankill = append(*cankill, rightButtom)
+
+}
+func canGetKing(queen []int, king []int) bool {
+	return int(math.Abs(float64(king[0])-float64(queen[0]))) == int(math.Abs(float64(king[1])-float64(queen[1])))
+}
+
+type SmallestInfiniteSet struct {
+	InfiniteSet []int
+}
+
+func NewConstructor() SmallestInfiniteSet {
+	arr := []int{}
+	count := 1
+	for i := 0; i < 1001; i++ {
+		arr = append(arr, count)
+		count++
+	}
+	return SmallestInfiniteSet{InfiniteSet: arr}
+	//["SmallestInfiniteSet","addBack","popSmallest","popSmallest","popSmallest","addBack","popSmallest","popSmallest","popSmallest"]
+	//[[],[2],[],[],[],[1],[],[],[]]
+}
+func (this *SmallestInfiniteSet) PopSmallest() int {
+
+	tmp := this.InfiniteSet[0]
+	this.InfiniteSet = this.InfiniteSet[1:]
+	return tmp
+
+}
+func (this *SmallestInfiniteSet) AddBack(num int) {
+
+	find := binarySearch(this.InfiniteSet, 0, len(this.InfiniteSet)-1, num)
+	if find == -1 {
+
+		this.InfiniteSet = append(this.InfiniteSet, num)
+		sort.Ints(this.InfiniteSet)
+
+	}
+
+}
+func binarySearch(arr []int, l, r int, num int) int {
+
+	for l < r {
+		mid := l + ((r - l) >> 2)
+		if arr[mid] > num {
+			r = mid - 1
+		} else if arr[mid] < num {
+			l = mid + 1
+		}
+		if arr[mid] == num {
+			return mid
 		}
 	}
-	res := 0
-	if len(minPoint) == 0 {
+
+	if l >= r && arr[l] != num {
 		return -1
 	}
-	for i, v := range points {
-		if v[0] == minPoint[0] && v[1] == minPoint[1] {
-			res = i
-			break
+
+	return l
+}
+
+/*func pop(root *SmallestInfiniteSet)int{
+	if root.Left != nil{
+		tmp := root.Val
+		root = nil
+		return tmp
+	}
+	return pop(root.Left)
+}
+func (this *SmallestInfiniteSet) AddBack(num int) {
+
+	if !getNum(this,num){
+		insertNum(this,num)
+	}
+}
+func insertNum(root *SmallestInfiniteSet,num int){
+	if root == nil{
+		return
+	}
+	if root.Val > num{
+
+		if root.Right == nil{
+			root.Right = &SmallestInfiniteSet{
+				Val:   num,
+				Left:  nil,
+				Right: nil,
+			}
+		}else {
+			insertNum(root.Right,num)
+		}
+	}else{
+		if root.Left == nil{
+			root.Right = &SmallestInfiniteSet{
+				Val:   num,
+				Left:  nil,
+				Right: nil,
+			}
+		}else {
+			insertNum(root.Left,num)
 		}
 	}
-	return res
+
 }
+func build(arr []int,l,r int) *SmallestInfiniteSet{
+
+	if l >= r{
+		return nil
+	}
+	mid := l + ((r-l)>>2)
+	root := &SmallestInfiniteSet{
+		Val: arr[mid],
+	}
+	left := build(arr,l,mid-1)
+	right := build(arr,mid+1,r)
+	root.Left  = left
+	root.Right = right
+	return root
+
+}
+func getNum(root *SmallestInfiniteSet, num int) bool {
+
+	if root == nil {
+		return false
+	}
+	if root.Val < num {
+		return getNum(root.Right, num)
+	} else if root.Val > num {
+		return getNum(root.Left, num)
+	}
+
+	return true
+
+}*/
