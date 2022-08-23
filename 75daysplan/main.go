@@ -3,12 +3,26 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.NearestValidPoint(1, 1, [][]int{{1, 1}, {1, 1}})
-	//level4.CountCharacters([]string{"cat", "bt", "hat"}, "atach")
-	//level4.CountCharacters([]string{"dyiclysmffuhibgfvapygkorkqllqlvokosagyelotobicwcmebnpznjbirzrzsrtzjxhsfpiwyfhzyonmuabtlwin", "ndqeyhhcquplmznwslewjzuyfgklssvkqxmqjpwhrshycmvrb", "ulrrbpspyudncdlbkxkrqpivfftrggemkpyjl", "boygirdlggnh", "xmqohbyqwagkjzpyawsydmdaattthmuvjbzwpyopyafphx", "nulvimegcsiwvhwuiyednoxpugfeimnnyeoczuzxgxbqjvegcxeqnjbwnbvowastqhojepisusvsidhqmszbrnynkyop", "hiefuovybkpgzygprmndrkyspoiyapdwkxebgsmodhzpx", "juldqdzeskpffaoqcyyxiqqowsalqumddcufhouhrskozhlmobiwzxnhdkidr", "lnnvsdcrvzfmrvurucrzlfyigcycffpiuoo", "oxgaskztzroxuntiwlfyufddl", "tfspedteabxatkaypitjfkhkkigdwdkctqbczcugripkgcyfezpuklfqfcsccboarbfbjfrkxp", "qnagrpfzlyrouolqquytwnwnsqnmuzphne", "eeilfdaookieawrrbvtnqfzcricvhpiv", "sisvsjzyrbdsjcwwygdnxcjhzhsxhpceqz", "yhouqhjevqxtecomahbwoptzlkyvjexhzcbccusbjjdgcfzlkoqwiwue", "hwxxighzvceaplsycajkhynkhzkwkouszwaiuzqcleyflqrxgjsvlegvupzqijbornbfwpefhxekgpuvgiyeudhncv", "cpwcjwgbcquirnsazumgjjcltitmeyfaudbnbqhflvecjsupjmgwfbjo", "teyygdmmyadppuopvqdodaczob", "qaeowuwqsqffvibrtxnjnzvzuuonrkwpysyxvkijemmpdmtnqxwekbpfzs", "qqxpxpmemkldghbmbyxpkwgkaykaerhmwwjonrhcsubchs"}, "usdruypficfbpfbivlrhutcgvyjenlxzeovdyjtgvvfdjzcmikjraspdfp")
-	//level4.FindingUsersActiveMinutes([][]int{{1, 1}, {2, 2}, {2, 3}}, 4)
-	//level4.MinOperations(6)
-	//level4.BstFromPreorder([]int{8, 5, 1, 7, 10, 12})
+	level4.CreateBinaryTree([][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}})
+	//level4.WateringPlants([]int{2,2,3,3},5)
+	//level4.MinPairSum([]int{3,5,4,2,4,6})
+	//level4.ProcessQueries([]int{7,5,5,8,3},8)
+	//level4.GroupThePeople([]int{3,3,3,3,3,1,3},)
+	//level4.MaxSumAfterPartitioning([]int{1,15,7,9,2,5,10},3)
+	//level4.NumberOfBeams([]string{"011001", "000000","010100", "001000"})
+	//level4.IntervalIntersection([][]int{{3, 5}, {9, 20}}, [][]int{{4, 5}, {7, 10}, {11, 12}, {14, 15}, {16, 20}})
+	//level4.IntervalIntersection([][]int{{0,2},{5,10},{13,23},{24,25}},[][]int{{1,5},{8,12},{15,24},{25,26}})
+	//level4.ComplexNumberMultiply("78+-76i","-86+72i")
+	//level4.MinSteps("cotxazilut","nahrrmcchxwrieqqdwdpneitkxgnt")
+	/*sm := level4.NewConstructor()
+	sm.AddBack(32)
+	a := sm.PopSmallest()
+	b:= sm.PopSmallest()
+	c := sm.PopSmallest()
+	sm.AddBack(1)
+	fmt.Println(a,b,c)*/
+	//level4.QueensAttacktheKing([][]int{{0,0},{1,1},{2,2},{3,4},{3,5},{4,4},{4,5}},[]int{3,3})
+	//level4.MemLeak(2,2)
 	/*code := level4.URLConstructor()
 	shorturl := code.Encode("https://baidu.com/1udbcdc")
 	url := code.Decode(shorturl)
@@ -28,13 +42,13 @@ func main() {
 	node5 := &level4.ListNode{
 		Val:  0,
 		Next: node6,
-	}*/
-	/*node4 := &level4.ListNode{
-		Val:  4,
-		Next: nil,
+	}
+	node4 := &level4.ListNode{
+		Val:  1,
+		Next: node5,
 	}
 	node3 := &level4.ListNode{
-		Val:  4,
+		Val:  3,
 		Next: node4,
 	}
 	node2 := &level4.ListNode{
@@ -161,24 +175,23 @@ func main() {
 		Val:   3,
 		Left:  nil,
 		Right: nil,
-	}*/
-	/*node3 := &level4.TreeNode{
+	}
+	node3 := &level3.TreeNode{
 		Val:   9,
 		Left:  nil,
-		Right: nil,
+		Right: node6,
 	}
-	node2 := &level4.TreeNode{
-		Val:   1,
-		Left:  nil,
-		Right: nil,
-	}
-	node1 := &level4.TreeNode{
+	node2 := &level3.TreeNode{
 		Val:   2,
+		Left:  node4,
+		Right: node5,
+	}
+	node1 := &level3.TreeNode{
+		Val:   4,
 		Left:  node2,
 		Right: node3,
 	}
-	level4.BstToGst(node1)*/
-	//level3.FindTilt(node1)
+	level3.FindTilt(node1)*/
 	//level3.IncreasingBST(node1)
 	//level3.LeafSimilar(node1,nil)
 	//level3.CountSegments("                ")
