@@ -3,7 +3,14 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.IntervalIntersection([][]int{{3, 5}, {9, 20}}, [][]int{{4, 5}, {7, 10}, {11, 12}, {14, 15}, {16, 20}})
+	level4.CreateBinaryTree([][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}})
+	//level4.WateringPlants([]int{2,2,3,3},5)
+	//level4.MinPairSum([]int{3,5,4,2,4,6})
+	//level4.ProcessQueries([]int{7,5,5,8,3},8)
+	//level4.GroupThePeople([]int{3,3,3,3,3,1,3},)
+	//level4.MaxSumAfterPartitioning([]int{1,15,7,9,2,5,10},3)
+	//level4.NumberOfBeams([]string{"011001", "000000","010100", "001000"})
+	//level4.IntervalIntersection([][]int{{3, 5}, {9, 20}}, [][]int{{4, 5}, {7, 10}, {11, 12}, {14, 15}, {16, 20}})
 	//level4.IntervalIntersection([][]int{{0,2},{5,10},{13,23},{24,25}},[][]int{{1,5},{8,12},{15,24},{25,26}})
 	//level4.ComplexNumberMultiply("78+-76i","-86+72i")
 	//level4.MinSteps("cotxazilut","nahrrmcchxwrieqqdwdpneitkxgnt")
