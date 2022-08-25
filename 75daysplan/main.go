@@ -3,7 +3,15 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.CreateBinaryTree([][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}})
+	level4.FindAndReplacePattern([]string{"deq", "mee", "aqq", "dkd", "ccc"}, "abb")
+	//level4.CheckArithmeticSubarrays([]int{4,6,5,9,3,7},[]int{0,0,2},[]int{2,3,5})
+	//level4.DiagonalSort([][]int{{3,3,1,1},{2,2,1,2},{1,1,1,2}})
+	//level4.ExecuteInstructions(3,[]int{0,1},"RRDDLU")
+	//level4.MinOperations("001011")
+	//level4.MaxIncreaseKeepingSkyline([][]int{{3,0,8,4},{2,4,5,7},{9,2,6,3},{0,3,1,0}})
+	/*sub := level4.Constructor1476([][]int{{1,2,1},{4,3,4},{3,2,1},{1,1,1}})
+	sub.GetValue(0,2)*/
+	//level4.CreateBinaryTree([][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}})
 	//level4.WateringPlants([]int{2,2,3,3},5)
 	//level4.MinPairSum([]int{3,5,4,2,4,6})
 	//level4.ProcessQueries([]int{7,5,5,8,3},8)
