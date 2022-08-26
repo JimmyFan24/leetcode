@@ -3,7 +3,47 @@ package main
 import "leetcode/75daysplan/level4"
 
 func main() {
-	level4.FindAndReplacePattern([]string{"deq", "mee", "aqq", "dkd", "ccc"}, "abb")
+	level4.MinAddToMakeValid("())")
+	//fmt.Println(((2<<2)-1))
+	//fmt.Println(2^3^4^7^5)
+	//level4.GetMaximumXor([]int{0},1)
+	/*node7 := &level4.TreeNode{
+		Val:   7,
+		Left:  nil,
+		Right: nil,
+	}
+	node6 := &level4.TreeNode{
+		Val:   6,
+		Left:  nil,
+		Right: nil,
+	}
+	node5 := &level4.TreeNode{
+		Val:   5,
+		Left:  nil,
+		Right: nil,
+	}
+	node4 := &level4.TreeNode{
+		Val:   4,
+		Left:  nil,
+		Right: nil,
+	}
+	node3 := &level4.TreeNode{
+		Val:   3,
+		Left:  node6,
+		Right: node7,
+	}
+	node2 := &level4.TreeNode{
+		Val:   2,
+		Left:  node4,
+		Right: node5,
+	}
+	node1 := &level4.TreeNode{
+		Val:   1,
+		Left:  node2,
+		Right: node3,
+	}
+	level4.DelNodes(node1,[]int{3,5})*/
+	//level4.FindAndReplacePattern([]string{"deq", "mee", "aqq", "dkd", "ccc"}, "abb")
 	//level4.CheckArithmeticSubarrays([]int{4,6,5,9,3,7},[]int{0,0,2},[]int{2,3,5})
 	//level4.DiagonalSort([][]int{{3,3,1,1},{2,2,1,2},{1,1,1,2}})
 	//level4.ExecuteInstructions(3,[]int{0,1},"RRDDLU")
@@ -60,10 +100,10 @@ func main() {
 		Next: node4,
 	}
 	node2 := &level4.ListNode{
-		Val:  0,
+		Val:  1,
 		Next: node3,
-	}
-	level4.MergeNodes(node2)*/
+	}/*
+	level4.DelNodes(node2,[]int{3,5})
 	//level4.LongestNiceSubstring("cChH")
 	//level4.CountGoodTriplets([]int{3,0,1,1,9,7},7,2,3)
 	//level4.MinBitFlips(10,82)
