@@ -1,11 +1,80 @@
 package main
 
-import "leetcode/75daysplan/level4"
+import "leetcode/75daysplan/level5"
 
 func main() {
-	level4.MaxCoins([]int{2, 4, 1, 2, 7, 8})
-	//level4.TriangularSum([]int{1, 2, 3, 4, 5})
-	//level4.DeckRevealedIncreasing([]int{17, 13, 11, 2, 3, 5, 7})
+
+	level5.HasAlternatingBits(5)
+	//level5.MinimumOperations([]int{1,5,0,3,5})
+	//level5.CanBeEqual([]int{3,9,7},[]int{3,9,11})
+	//level5.SpecialArray([]int{3,9,7,8,3,8,6,6})
+	//level5.MakeEqual([]string{"abc","aabc","bc"})
+	//level4.CommonChars([]string{"ccbdbcba", "cbdda", "accdcdbb"})
+	//level4.NumUniqueEmails([]string{"a@leetcode.com", "b@leetcode.com", "c@leetcode.com"})
+	//level4.RelativeSortArray([]int{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}, []int{2, 1, 4, 3, 9, 6})
+	//level4.FindMiddleIndex([]int{0, 0, 0, 0})
+	//level4.MinCostToMoveChips([]int{2, 2, 2, 3, 3})
+	//level4.SortString("rat")
+	//level4.FrequencySort([]int{-1, 1, -6, 4, 5, -6, 1, 4, 1})
+	//level4.CountBinarySubstrings("1100")
+	//level4.FindShortestSubArray([]int{2, 1})
+	/*kStream := level4.Constructor703(3, []int{4, 5, 8, 2})
+	a := kStream.Add(3)
+	b := kStream.Add(5)
+	c := kStream.Add(10)
+	d := kStream.Add(9)
+	e := kStream.Add(4)
+	fmt.Println(a, b, c, d, e)*/
+	//level4.ShortestCompletingWord("1s3 PSt", []string{"step", "steps", "stripe", "stepple"})
+	//level4.MinAddToMakeValid("())")
+	//fmt.Println(((2<<2)-1))
+	//fmt.Println(2^3^4^7^5)
+	//level4.GetMaximumXor([]int{0},1)
+	/*node7 := &level4.TreeNode{
+		Val:   1,
+		Left:  nil,
+		Right: nil,
+	}
+	node6 := &level4.TreeNode{
+		Val:   0,
+		Left:  nil,
+		Right: nil,
+	}
+	node5 := &level4.TreeNode{
+		Val:   1,
+		Left:  nil,
+		Right: nil,
+	}
+	node4 := &level4.TreeNode{
+		Val:   0,
+		Left:  nil,
+		Right: nil,
+	}
+	node3 := &level4.TreeNode{
+		Val:   1,
+		Left:  node6,
+		Right: node7,
+	}
+	node2 := &level4.TreeNode{
+		Val:   0,
+		Left:  node4,
+		Right: node5,
+	}*/
+	/*node1 := &level4.TreeNode{
+		Val:   1,
+		Left:  nil,
+		Right: nil,
+	}
+	level4.SumRootToLeaf(node1)*/
+	/*level4.DelNodes(node1,[]int{3,5})*/
+	//level4.FindAndReplacePattern([]string{"deq", "mee", "aqq", "dkd", "ccc"}, "abb")
+	//level4.CheckArithmeticSubarrays([]int{4,6,5,9,3,7},[]int{0,0,2},[]int{2,3,5})
+	//level4.DiagonalSort([][]int{{3,3,1,1},{2,2,1,2},{1,1,1,2}})
+	//level4.ExecuteInstructions(3,[]int{0,1},"RRDDLU")
+	//level4.MinOperations("001011")
+	//level4.MaxIncreaseKeepingSkyline([][]int{{3,0,8,4},{2,4,5,7},{9,2,6,3},{0,3,1,0}})
+	/*sub := level4.Constructor1476([][]int{{1,2,1},{4,3,4},{3,2,1},{1,1,1}})
+	sub.GetValue(0,2)*/
 	//level4.CreateBinaryTree([][]int{{20, 15, 1}, {20, 17, 0}, {50, 20, 1}, {50, 80, 0}, {80, 19, 1}})
 	//level4.WateringPlants([]int{2,2,3,3},5)
 	//level4.MinPairSum([]int{3,5,4,2,4,6})
@@ -55,10 +124,10 @@ func main() {
 		Next: node4,
 	}
 	node2 := &level4.ListNode{
-		Val:  0,
+		Val:  1,
 		Next: node3,
-	}
-	level4.MergeNodes(node2)*/
+	}/*
+	level4.DelNodes(node2,[]int{3,5})
 	//level4.LongestNiceSubstring("cChH")
 	//level4.CountGoodTriplets([]int{3,0,1,1,9,7},7,2,3)
 	//level4.MinBitFlips(10,82)
