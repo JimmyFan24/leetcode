@@ -4,7 +4,37 @@ import "leetcode/75daysplan/level5"
 
 func main() {
 
-	level5.HasAlternatingBits(5)
+	node5 := &level5.TreeNode{
+		Val:   2,
+		Left:  nil,
+		Right: nil,
+	}
+	node4 := &level5.TreeNode{
+		Val:   3,
+		Left:  nil,
+		Right: nil,
+	}
+	node3 := &level5.TreeNode{
+		Val:   3,
+		Left:  nil,
+		Right: nil,
+	}
+	node2 := &level5.TreeNode{
+		Val:   3,
+		Left:  node4,
+		Right: node5,
+	}
+	node1 := &level5.TreeNode{
+		Val:   1,
+		Left:  node2,
+		Right: node3,
+	}
+	level5.RemoveLeafNodes(node1, 3)
+	//level5.LetterCasePermutation("a1b2")
+	//level5.RemoveOccurrences("yjyjqnaxlbqnaxlbfss","yjqnaxlb")
+	//level5.CountSquares([][]int{{1,0,1},{1,1,0},{1,1,0}})
+	//level5.GarbageCollection([]string{"MMM","PGM","GP"},[]int{3,10})
+	//level5.HasAlternatingBits(5)
 	//level5.MinimumOperations([]int{1,5,0,3,5})
 	//level5.CanBeEqual([]int{3,9,7},[]int{3,9,11})
 	//level5.SpecialArray([]int{3,9,7,8,3,8,6,6})
