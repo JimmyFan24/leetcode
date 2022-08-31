@@ -4,7 +4,9 @@ import "leetcode/75daysplan/level5"
 
 func main() {
 
-	node5 := &level5.TreeNode{
+	level5.SubdomainVisits([]string{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"})
+	//level5.FindDuplicates([]int{4, 3, 2, 7, 8, 2, 3, 1})
+	/*node5 := &level5.TreeNode{
 		Val:   2,
 		Left:  nil,
 		Right: nil,
@@ -29,7 +31,7 @@ func main() {
 		Left:  node2,
 		Right: node3,
 	}
-	level5.RemoveLeafNodes(node1, 3)
+	level5.RemoveLeafNodes(node1, 3)*/
 	//level5.LetterCasePermutation("a1b2")
 	//level5.RemoveOccurrences("yjyjqnaxlbqnaxlbfss","yjqnaxlb")
 	//level5.CountSquares([][]int{{1,0,1},{1,1,0},{1,1,0}})
