@@ -3,8 +3,22 @@ package main
 import "leetcode/75daysplan/level5"
 
 func main() {
-
-	node5 := &level5.TreeNode{
+	level5.NumTeams([]int{1, 2, 3, 4})
+	//level5.CheckIfCanBreak("szy","cid")
+	//fmt.Println("123"+"4"=="1234")
+	//level5.NumOfPairs([]string{"123","4","12","34"},"1234")
+	//"checkIn","checkOut","checkIn","checkIn","checkOut","checkIn","getAverageTime
+	//[117077,"OZ13ZSIN",42],[117077,"FU1D57HA",125],[704903,"OZ13ZSIN",211],[911239,"OZ13ZSIN",245] [704903,"HG98HCFL",340],[859828,"OZ13ZSIN",355]
+	/*ud := level5.Constructor1396()
+	ud.CheckIn(117077,"OZ13ZSIN",42)
+	ud.CheckOut(117077,"FU1D57HA",125)
+	ud.CheckIn(704903,"OZ13ZSIN",211)
+	ud.CheckIn(911239,"OZ13ZSIN",245)
+	ud.CheckOut(704903,"HG98HCFL",340)
+	ud.CheckIn(859828,"OZ13ZSIN",355)
+	ud.GetAverageTime("OZ13ZSIN","FU1D57HA")*/
+	//level5.RestoreMatrix([]int{5,7,10},[]int{8,6,8})
+	/*node5 := &level5.TreeNode{
 		Val:   2,
 		Left:  nil,
 		Right: nil,
@@ -29,7 +43,7 @@ func main() {
 		Left:  node2,
 		Right: node3,
 	}
-	level5.RemoveLeafNodes(node1, 3)
+	level5.RemoveLeafNodes(node1, 3)*/
 	//level5.LetterCasePermutation("a1b2")
 	//level5.RemoveOccurrences("yjyjqnaxlbqnaxlbfss","yjqnaxlb")
 	//level5.CountSquares([][]int{{1,0,1},{1,1,0},{1,1,0}})
