@@ -3,28 +3,13 @@ package main
 import "leetcode/75daysplan/level5"
 
 func main() {
-	level5.NumTeams([]int{1, 2, 3, 4})
-	//level5.CheckIfCanBreak("szy","cid")
-	//fmt.Println("123"+"4"=="1234")
-	//level5.NumOfPairs([]string{"123","4","12","34"},"1234")
-	//"checkIn","checkOut","checkIn","checkIn","checkOut","checkIn","getAverageTime
-	//[117077,"OZ13ZSIN",42],[117077,"FU1D57HA",125],[704903,"OZ13ZSIN",211],[911239,"OZ13ZSIN",245] [704903,"HG98HCFL",340],[859828,"OZ13ZSIN",355]
-	/*ud := level5.Constructor1396()
-	ud.CheckIn(117077,"OZ13ZSIN",42)
-	ud.CheckOut(117077,"FU1D57HA",125)
-	ud.CheckIn(704903,"OZ13ZSIN",211)
-	ud.CheckIn(911239,"OZ13ZSIN",245)
-	ud.CheckOut(704903,"HG98HCFL",340)
-	ud.CheckIn(859828,"OZ13ZSIN",355)
-	ud.GetAverageTime("OZ13ZSIN","FU1D57HA")*/
-	//level5.RestoreMatrix([]int{5,7,10},[]int{8,6,8})
-	/*node5 := &level5.TreeNode{
+
+	//level5.HasAlternatingBits(5)
+	level5.PartitionArray([]int{3, 6, 1, 2, 5}, 2)
+	//level5.CanVisitAllRooms([][]int{{2,3},{},{2},{1,3}})
+	//level5.MctFromLeafValues([]int{6, 2, 4})
+	/*node4 := &level5.TreeNode{
 		Val:   2,
-		Left:  nil,
-		Right: nil,
-	}
-	node4 := &level5.TreeNode{
-		Val:   3,
 		Left:  nil,
 		Right: nil,
 	}
@@ -34,21 +19,23 @@ func main() {
 		Right: nil,
 	}
 	node2 := &level5.TreeNode{
-		Val:   3,
-		Left:  node4,
-		Right: node5,
+		Val:   1,
+		Left:  nil,
+		Right: node4,
 	}
 	node1 := &level5.TreeNode{
-		Val:   1,
+		Val:   0,
 		Left:  node2,
 		Right: node3,
-	}
-	level5.RemoveLeafNodes(node1, 3)*/
+	}*/
+	//level5.SubtreeWithAllDeepest(node1)
+	//level5.RemoveLeafNodes(node1, 3)
 	//level5.LetterCasePermutation("a1b2")
 	//level5.RemoveOccurrences("yjyjqnaxlbqnaxlbfss","yjqnaxlb")
 	//level5.CountSquares([][]int{{1,0,1},{1,1,0},{1,1,0}})
 	//level5.GarbageCollection([]string{"MMM","PGM","GP"},[]int{3,10})
 	//level5.HasAlternatingBits(5)
+
 	//level5.MinimumOperations([]int{1,5,0,3,5})
 	//level5.CanBeEqual([]int{3,9,7},[]int{3,9,11})
 	//level5.SpecialArray([]int{3,9,7,8,3,8,6,6})
