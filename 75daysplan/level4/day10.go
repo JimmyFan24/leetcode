@@ -275,53 +275,43 @@ func NumUniqueEmails(emails []string) int {
 }
 func CommonChars(words []string) []string {
 
-	//1.找最短的
-	min := math.MaxInt32
+	wordMap := []map[rune]int{}
+	res := []string{}
 	minStr := ""
+	min := math.MaxInt32
 	for _, v := range words {
 		if len(v) < min {
 			min = len(v)
 			minStr = v
 		}
 	}
-	res := []string{}
-	minMap := make(map[rune]int, 26)
+	minMap := make(map[rune]int, min)
 	for _, v := range minStr {
 		minMap[v]++
 	}
-	for k, _ := range minMap {
 
-		i := 0
-
-		for ; i < len(words); i++ {
-			if words[i] == minStr {
-				continue
-			}
-			wordFreq := hasChar(words[i], k)
-			if wordFreq < 1 {
-				break
-			} else if wordFreq < minMap[k] {
-				minMap[k] = wordFreq
-			}
-
+	for _, v := range words {
+		if v == minStr {
+			continue
 		}
-		if i == len(words) {
-			for minMap[k] > 0 {
-				res = append(res, string(k))
-				minMap[k]--
+		tmpMap := make(map[rune]int, len(v))
+		for _, vv := range v {
+			tmpMap[vv]++
+		}
+		wordMap = append(wordMap, tmpMap)
+	}
+	for k, b := range minMap {
+		min := b
+		index := 0
+		for ; index < len(wordMap); index++ {
+			if wordMap[index][k] > 0 && wordMap[index][k] < min {
+				minMap[k] = wordMap[index][k]
 			}
 		}
-
+		if index == len(wordMap) {
+			res = append(res, string(k))
+		}
 	}
 
 	return res
-}
-func hasChar(word string, b rune) int {
-
-	wMap := make(map[rune]int, 26)
-	for _, v := range word {
-		wMap[v]++
-	}
-
-	return wMap[b]
 }
