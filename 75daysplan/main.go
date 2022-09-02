@@ -4,8 +4,16 @@ import "leetcode/75daysplan/level5"
 
 func main() {
 
+	level5.GenerateMatrix(6)
+	//level5.CombinationSum2([]int{10,1,2,7,6,1,5},8)
+	//level5.Multiply("498828660196","840477629533")
+	//fmt.Println(498828660196*840477629533)
+	//level5.NextPermutation([]int{3,2,1})
+	//level5.IntToRoman(1994)
+	//level5.FindFarmland([][]int{{1, 1}, {0, 0}})
+	//level5.MinFallingPathSum([][]int{{-84,-36,2},{87,-79,10},{42,10,63}})
 	//level5.HasAlternatingBits(5)
-	level5.PartitionArray([]int{3, 6, 1, 2, 5}, 2)
+	//level5.PartitionArray([]int{3, 6, 1, 2, 5}, 2)
 	//level5.CanVisitAllRooms([][]int{{2,3},{},{2},{1,3}})
 	//level5.MctFromLeafValues([]int{6, 2, 4})
 	/*node4 := &level5.TreeNode{
