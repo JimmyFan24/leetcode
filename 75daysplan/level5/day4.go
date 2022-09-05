@@ -19,9 +19,7 @@ func SubtreeWithAllDeepest(root *TreeNode) *TreeNode {
 	left := getDepth(root.Left, count)
 	right := getDepth(root.Right, count)
 	if left > right {
-
 		return SubtreeWithAllDeepest(root.Left)
-
 	} else if right > left {
 		return SubtreeWithAllDeepest(root.Right)
 	}

@@ -4,9 +4,12 @@ import "leetcode/75daysplan/level5"
 
 func main() {
 
+	level5.FindFarmland([][]int{{1, 1}, {0, 0}})
+	//level5.MinFallingPathSum([][]int{{-84,-36,2},{87,-79,10},{42,10,63}})
 	//level5.HasAlternatingBits(5)
-
-	level5.MctFromLeafValues([]int{6, 2, 4})
+	//level5.PartitionArray([]int{3, 6, 1, 2, 5}, 2)
+	//level5.CanVisitAllRooms([][]int{{2,3},{},{2},{1,3}})
+	//level5.MctFromLeafValues([]int{6, 2, 4})
 	/*node4 := &level5.TreeNode{
 		Val:   2,
 		Left:  nil,
