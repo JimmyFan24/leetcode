@@ -4,7 +4,38 @@ import "leetcode/75daysplan/level5"
 
 func main() {
 
-	level5.GenerateMatrix(6)
+	level5.RestoreIpAddresses("25525511135")
+	/*l6 := &level5.ListNode{
+		2, nil,
+	}
+
+	l5 := &level5.ListNode{
+		5,
+		l6,
+	}
+	l4 := &level5.ListNode{
+		2,
+		l5,
+	}
+	l3 := &level5.ListNode{
+		3,
+		l4,
+	}
+	l2 := &level5.ListNode{
+		4,
+		l3,
+	}
+	l1 := &level5.ListNode{
+		1,
+		l2,
+	}
+	level5.RecoverTree(node1)*/
+	//level5.Partition(l1, 3)
+	//level5.Combine(4,2)
+	//level5.Insert([][]int{{1,5}},[]int{2,3})
+	//
+	//level5.Insert([][]int{{1,2},{3,5},{6,7},{8,10},{12,16}},[]int{4,8})
+	//level5.GenerateMatrix(6)
 	//level5.CombinationSum2([]int{10,1,2,7,6,1,5},8)
 	//level5.Multiply("498828660196","840477629533")
 	//fmt.Println(498828660196*840477629533)
@@ -16,26 +47,50 @@ func main() {
 	//level5.PartitionArray([]int{3, 6, 1, 2, 5}, 2)
 	//level5.CanVisitAllRooms([][]int{{2,3},{},{2},{1,3}})
 	//level5.MctFromLeafValues([]int{6, 2, 4})
-	/*node4 := &level5.TreeNode{
+
+	/*node7 := &level5.TreeNode{
 		Val:   2,
 		Left:  nil,
 		Right: nil,
 	}
-	node3 := &level5.TreeNode{
-		Val:   3,
+	node8 := &level5.TreeNode{
+		Val:   4,
+		Left:  nil,
+		Right: nil,
+	}
+	node6 := &level5.TreeNode{
+		Val:   7,
+		Left:  nil,
+		Right: nil,
+	}
+	node5 := &level5.TreeNode{
+		Val:   13,
+		Left:  nil,
+		Right: nil,
+	}*/
+	/*node4 := &level5.TreeNode{
+		Val:  2,
+		Left:  nil,
+		Right: nil,
+	}*/
+	/*node3 := &level5.TreeNode{
+		Val:   2,
 		Left:  nil,
 		Right: nil,
 	}
 	node2 := &level5.TreeNode{
-		Val:   1,
+		Val:   3,
 		Left:  nil,
-		Right: node4,
+		Right: node3,
 	}
 	node1 := &level5.TreeNode{
-		Val:   0,
+		Val:   1,
 		Left:  node2,
-		Right: node3,
-	}*/
+		Right: nil,
+	}
+	level5.RecoverTree(node1)*/
+	//level5.PathSum(node1,22)*/
+	//level5.SumNumbers(node1)
 	//level5.SubtreeWithAllDeepest(node1)
 	//level5.RemoveLeafNodes(node1, 3)
 	//level5.LetterCasePermutation("a1b2")
