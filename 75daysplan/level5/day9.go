@@ -43,25 +43,40 @@ func RestoreIpAddresses(s string) []string {
 	res := []string{}
 
 	dfsRestoreIpAddress(s, &res, 4, 0, "", 0)
+
+	for i := 0; i < len(res); i++ {
+		res[i] = res[i][:len(res[i])-1]
+	}
 	return res
 }
 func dfsRestoreIpAddress(s string, res *[]string, end, count int, tmp string, start int) {
 
 	if count == end {
+		if len(tmp) != len(s)+4 {
+			return
+		}
 		*res = append(*res, tmp)
 	}
 
-	for i := start; i < len(s); i++ {
-		if isVaild(tmp + string(s[i])) {
-			dfsRestoreIpAddress(s, res, end, count+1, tmp+string(s[i]), start+1)
+	//1.1.1.1 11.1.1.1
+
+	j := start
+	for i := 1; i <= 3; i++ {
+		if j+i <= len(s) {
+			t := s[j : j+i]
+			tt := tmp
+			if isVaild(t) {
+				tmp = tmp + t + "."
+				dfsRestoreIpAddress(s, res, end, count+1, tmp, j+i)
+				tmp = tt
+			}
 		}
-		dfsRestoreIpAddress(s, res, end, count+1, tmp, start+1)
 	}
 	return
 }
 func isVaild(s string) bool {
 
-	if s[0] == '0' {
+	if s[0] == '0' && len(s) > 1 {
 		return false
 	}
 	if len(s) > 3 || len(s) < 1 {

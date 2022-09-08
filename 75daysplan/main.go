@@ -4,9 +4,12 @@ import "leetcode/75daysplan/level5"
 
 func main() {
 
-	level5.RestoreIpAddresses("25525511135")
+	level5.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", []string{"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"})
+	//level5.ReverseWords("  hello world  ")
+	//level5.MinimumTotal([][]int{{2},{3,4},{6,5,7},{4,1,8,3}})
+	//level5.RestoreIpAddresses("25525511135")
 	/*l6 := &level5.ListNode{
-		2, nil,
+		6, nil,
 	}
 
 	l5 := &level5.ListNode{
@@ -14,7 +17,7 @@ func main() {
 		l6,
 	}
 	l4 := &level5.ListNode{
-		2,
+		4,
 		l5,
 	}
 	l3 := &level5.ListNode{
@@ -22,14 +25,14 @@ func main() {
 		l4,
 	}
 	l2 := &level5.ListNode{
-		4,
+		2,
 		l3,
 	}
 	l1 := &level5.ListNode{
 		1,
 		l2,
 	}
-	level5.RecoverTree(node1)*/
+	level5.ReverseBetween(l1,1,2)*/
 	//level5.Partition(l1, 3)
 	//level5.Combine(4,2)
 	//level5.Insert([][]int{{1,5}},[]int{2,3})
