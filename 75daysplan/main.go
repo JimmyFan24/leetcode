@@ -1,10 +1,14 @@
 package main
 
-import "leetcode/75daysplan/level5"
+import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level5.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", []string{"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"})
+	level6.IntegerBreak(10)
+	//level6.CountNumbersWithUniqueDigits(3)
+	//level6.HIndex([]int{1,3,1})
+	//level6.NthUglyNumber(10)
+	//level5.WordBreak("", []string{"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"})
 	//level5.ReverseWords("  hello world  ")
 	//level5.MinimumTotal([][]int{{2},{3,4},{6,5,7},{4,1,8,3}})
 	//level5.RestoreIpAddresses("25525511135")
