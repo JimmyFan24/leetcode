@@ -1,35 +1,119 @@
 package main
 
-import "leetcode/75daysplan/level5"
+import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level5.FindFarmland([][]int{{1, 1}, {0, 0}})
+	level6.CombinationSum3(3, 9)
+	//level6.Calculate( "2*3-4")
+	//level6.FindMin([]int{3, 4, 5, 1, 2})
+	//level6.RemoveDuplicates([]int{0, 0, 1, 1, 1, 1, 2, 3, 3})
+	//level6.Rotate2([]int{1, 2, 3, 4, 5, 6, 7}, 3)
+	//level6.CompareVersion("1.0.1", "1")
+	//level6.TwoSum167([]int{2, 3, 4}, 6)
+
+	//n := int64(-4)
+
+	//fmt.Println(strconv.FormatInt(n, 2))
+	//fmt.Println(-4 | (1 << 31))
+	//level6.SingleNumber([]int{-5, -5, -5, 1})
+	//level5.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", []string{"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"})
+	//level5.ReverseWords("  hello world  ")
+	//level5.MinimumTotal([][]int{{2},{3,4},{6,5,7},{4,1,8,3}})
+	//level5.RestoreIpAddresses("25525511135")
+
+	/*l7 := &level6.ListNode{
+		5,
+		nil,
+	}
+	l6 := &level6.ListNode{
+		4,
+		l7,
+	}
+	l5 := &level6.ListNode{
+		4,
+		l6,
+	}
+	l4 := &level6.ListNode{
+		3,
+		l5,
+	}*/
+	/*(	l3 := &level6.ListNode{
+		2,
+		nil,
+	}
+	l2 := &level6.ListNode{
+		2,
+		l3,
+	}
+	l1 := &level6.ListNode{
+		1,
+		l2,
+	}
+	level6.DeleteDuplicates(l1)*/
+	//level6.InsertionSortList(l1)
+	//level5.ReverseBetween(l1,1,2)
+	//level5.Partition(l1, 3)
+	//level5.Combine(4,2)
+	//level5.Insert([][]int{{1,5}},[]int{2,3})
+	//
+	//level5.Insert([][]int{{1,2},{3,5},{6,7},{8,10},{12,16}},[]int{4,8})
+	//level5.GenerateMatrix(6)
+	//level5.CombinationSum2([]int{10,1,2,7,6,1,5},8)
+	//level5.Multiply("498828660196","840477629533")
+	//fmt.Println(498828660196*840477629533)
+	//level5.NextPermutation([]int{3,2,1})
+	//level5.IntToRoman(1994)
+	//level5.FindFarmland([][]int{{1, 1}, {0, 0}})
 	//level5.MinFallingPathSum([][]int{{-84,-36,2},{87,-79,10},{42,10,63}})
 	//level5.HasAlternatingBits(5)
 	//level5.PartitionArray([]int{3, 6, 1, 2, 5}, 2)
 	//level5.CanVisitAllRooms([][]int{{2,3},{},{2},{1,3}})
 	//level5.MctFromLeafValues([]int{6, 2, 4})
-	/*node4 := &level5.TreeNode{
+
+	/*node7 := &level5.TreeNode{
 		Val:   2,
 		Left:  nil,
 		Right: nil,
 	}
-	node3 := &level5.TreeNode{
-		Val:   3,
+	node8 := &level5.TreeNode{
+		Val:   4,
+		Left:  nil,
+		Right: nil,
+	}
+	node6 := &level5.TreeNode{
+		Val:   7,
+		Left:  nil,
+		Right: nil,
+	}
+	node5 := &level5.TreeNode{
+		Val:   13,
+		Left:  nil,
+		Right: nil,
+	}*/
+	/*node4 := &level5.TreeNode{
+		Val:  2,
+		Left:  nil,
+		Right: nil,
+	}*/
+	/*node3 := &level5.TreeNode{
+		Val:   2,
 		Left:  nil,
 		Right: nil,
 	}
 	node2 := &level5.TreeNode{
-		Val:   1,
+		Val:   3,
 		Left:  nil,
-		Right: node4,
+		Right: node3,
 	}
 	node1 := &level5.TreeNode{
-		Val:   0,
+		Val:   1,
 		Left:  node2,
-		Right: node3,
-	}*/
+		Right: nil,
+	}
+	level5.RecoverTree(node1)*/
+	//level5.PathSum(node1,22)*/
+	//level5.SumNumbers(node1)
 	//level5.SubtreeWithAllDeepest(node1)
 	//level5.RemoveLeafNodes(node1, 3)
 	//level5.LetterCasePermutation("a1b2")
