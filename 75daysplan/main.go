@@ -4,55 +4,39 @@ import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level6.CombinationSum3(3, 9)
-	//level6.Calculate( "2*3-4")
-	//level6.FindMin([]int{3, 4, 5, 1, 2})
-	//level6.RemoveDuplicates([]int{0, 0, 1, 1, 1, 1, 2, 3, 3})
-	//level6.Rotate2([]int{1, 2, 3, 4, 5, 6, 7}, 3)
-	//level6.CompareVersion("1.0.1", "1")
-	//level6.TwoSum167([]int{2, 3, 4}, 6)
-
-	//n := int64(-4)
-
-	//fmt.Println(strconv.FormatInt(n, 2))
-	//fmt.Println(-4 | (1 << 31))
-	//level6.SingleNumber([]int{-5, -5, -5, 1})
-	//level5.WordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", []string{"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"})
+	level6.IntegerBreak(10)
+	//level6.CountNumbersWithUniqueDigits(3)
+	//level6.HIndex([]int{1,3,1})
+	//level6.NthUglyNumber(10)
+	//level5.WordBreak("", []string{"a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"})
 	//level5.ReverseWords("  hello world  ")
 	//level5.MinimumTotal([][]int{{2},{3,4},{6,5,7},{4,1,8,3}})
 	//level5.RestoreIpAddresses("25525511135")
+	/*l6 := &level5.ListNode{
+		6, nil,
+	}
 
-	/*l7 := &level6.ListNode{
+	l5 := &level5.ListNode{
 		5,
-		nil,
-	}
-	l6 := &level6.ListNode{
-		4,
-		l7,
-	}
-	l5 := &level6.ListNode{
-		4,
 		l6,
 	}
-	l4 := &level6.ListNode{
-		3,
+	l4 := &level5.ListNode{
+		4,
 		l5,
-	}*/
-	/*(	l3 := &level6.ListNode{
-		2,
-		nil,
 	}
-	l2 := &level6.ListNode{
+	l3 := &level5.ListNode{
+		3,
+		l4,
+	}
+	l2 := &level5.ListNode{
 		2,
 		l3,
 	}
-	l1 := &level6.ListNode{
+	l1 := &level5.ListNode{
 		1,
 		l2,
 	}
-	level6.DeleteDuplicates(l1)*/
-	//level6.InsertionSortList(l1)
-	//level5.ReverseBetween(l1,1,2)
+	level5.ReverseBetween(l1,1,2)*/
 	//level5.Partition(l1, 3)
 	//level5.Combine(4,2)
 	//level5.Insert([][]int{{1,5}},[]int{2,3})
