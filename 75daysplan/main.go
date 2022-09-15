@@ -4,7 +4,24 @@ import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level6.IntegerBreak(10)
+	level6.MaxNumberOfFamilies(4, [][]int{{4, 3}, {1, 4}, {4, 6}, {1, 7}})
+	//level6.NumDecodings("12")
+	//level6.SubsetsWithDup([]int{1,2,2})
+	//level6.SearchMatrix([][]int{{1,3,5,7},{10,11,16,20},{23,30,34,60}},3)
+	//level6.TrailingZeroes(30)
+	//fmt.Println(10*9*8*7*6*5*4*3*2*1)
+	//level6.EvalRPN([]string{"3","-4","+"})
+	/*t := level6.Constructor355()
+	t.PostTweet(2,5)
+	t.Follow(1,2)
+	t.Follow(1,2)
+	text1 := t.GetNewsFeed(1)
+	t.Follow(2,1)
+	text2 := t.GetNewsFeed(2)
+	t.Unfollow(2,1)
+	text3 := t.GetNewsFeed(2)
+	fmt.Println(text1,text2,text3)*/
+	//level6.IntegerBreak(10)
 	//level6.CountNumbersWithUniqueDigits(3)
 	//level6.HIndex([]int{1,3,1})
 	//level6.NthUglyNumber(10)
