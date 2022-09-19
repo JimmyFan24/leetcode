@@ -4,7 +4,11 @@ import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level6.MaxNumberOfFamilies(4, [][]int{{4, 3}, {1, 4}, {4, 6}, {1, 7}})
+	level6.MaxProfit([]int{6, 1, 3, 2, 4, 7})
+	//level6.CountPrimes(10)
+	//level6.PermuteUnique([]int{3,4,5})
+	//level6.FindDuplicate([]string{"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"})
+	//level6.MaxNumberOfFamilies(4, [][]int{{4, 3}, {1, 4}, {4, 6}, {1, 7}})
 	//level6.NumDecodings("12")
 	//level6.SubsetsWithDup([]int{1,2,2})
 	//level6.SearchMatrix([][]int{{1,3,5,7},{10,11,16,20},{23,30,34,60}},3)
