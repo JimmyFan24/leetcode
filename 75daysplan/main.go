@@ -4,7 +4,10 @@ import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level6.MaxProfit([]int{6, 1, 3, 2, 4, 7})
+	level6.MaxScoreWords([]string{"ac", "abd", "db", "ba", "dddd", "bca"}, []byte{'a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'd', 'd', 'd', 'd'}, []int{6, 4, 4, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
+	//level6.UniquePathsIII([][]int{{0,1},{2,0}})
+	//level6.LargestDivisibleSubset([]int{5,9,18,54,108,540,90,180,360,720})
+	//level6.MaxProfit([]int{6, 1, 3, 2, 4, 7})
 	//level6.CountPrimes(10)
 	//level6.PermuteUnique([]int{3,4,5})
 	//level6.FindDuplicate([]string{"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"})
