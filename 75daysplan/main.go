@@ -4,7 +4,12 @@ import "leetcode/75daysplan/level6"
 
 func main() {
 
-	level6.SumEvenAfterQueries([]int{1, 2, 3, 4}, [][]int{{1, 0}, {-3, 1}, {-4, 0}, {2, 3}})
+	level6.CanSeePersonsCount([]int{10, 6, 8, 5, 11, 9})
+	//level6.MaxSatisfaction([]int{4,3,2})
+	//level6.ConcatenatedBinary(42)
+	//level6.MaxScoreWords([]string{"ac", "abd", "db", "ba", "dddd", "bca"}, []byte{'a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'd', 'd', 'd', 'd'}, []int{6, 4, 4, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
+	//level6.UniquePathsIII([][]int{{0,1},{2,0}})
+	//level6.LargestDivisibleSubset([]int{5,9,18,54,108,540,90,180,360,720})
 	//level6.MaxProfit([]int{6, 1, 3, 2, 4, 7})
 	//level6.CountPrimes(10)
 	//level6.PermuteUnique([]int{3,4,5})
