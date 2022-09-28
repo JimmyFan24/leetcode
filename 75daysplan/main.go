@@ -4,7 +4,19 @@ import "leetcode/75daysplan/level7"
 
 func main() {
 
-	level7.OddCells(2, 3, [][]int{{0, 1}, {1, 1}})
+	level7.CountTriples(5)
+	//level7.CountStudents([]int{1,1,1,0,0,1},[]int{1,0,0,0,1,1})
+	//level7.CheckXMatrix([][]int{{2,0,0,1},{0,3,1,0},{0,5,2,0},{4,0,0,2}})
+	//level7.MinStartValue([]int{1,-2,-3})
+	//level7.FindWords([]string{"Hello","Alaska","Dad","Peace"})
+	//level7.IslandPerimeter([][]int{{0,1,0,0},{1,1,1,0},{0,1,0,0},{1,1,0,0}})
+	//level7.Intersection([][]int{{3,1,2,4,5},{1,2,3,4},{3,4,5,6}})
+	//level7.MinimumAbsDifference([]int{4,2,1,3})
+	//level7.CheckDistances("abaccb",[]int{1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0})
+	//level7.ShortestToChar("loveleetcode",'e')
+	//level7.MinTimeToType("zjpc")
+	//level7.SortByBits([]int{0,1,2,3,4,5,6,7,8})
+	//level7.OddCells(2, 3, [][]int{{0, 1}, {1, 1}})
 	//level7.MinTimeToVisitAllPoints([][]int{{1,1},{3,4},{-1,0}})
 	//level7.FreqAlphabets("10#11#12")
 	//level7.ReplaceDigits("a1c1e1")
@@ -18,6 +30,9 @@ func main() {
 	//level6.MaxScoreWords([]string{"ac", "abd", "db", "ba", "dddd", "bca"}, []byte{'a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'd', 'd', 'd', 'd'}, []int{6, 4, 4, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0})
 	//level6.UniquePathsIII([][]int{{0,1},{2,0}})
 	//level6.LargestDivisibleSubset([]int{5,9,18,54,108,540,90,180,360,720})
+
+	//level6.SumEvenAfterQueries([]int{1, 2, 3, 4}, [][]int{{1, 0}, {-3, 1}, {-4, 0}, {2, 3}})
+
 	//level6.MaxProfit([]int{6, 1, 3, 2, 4, 7})
 	//level6.CountPrimes(10)
 	//level6.PermuteUnique([]int{3,4,5})
