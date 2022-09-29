@@ -1,10 +1,15 @@
 package main
 
-import "leetcode/75daysplan/level7"
-
 func main() {
 
-	level7.CountTriples(5)
+	//level7.NumTilePossibilities("AAB")
+	//level7.MaximumXOR([]int{3,2,4,6})
+	//level7.CountHillValley([]int{6,6,5,5,4,1})
+	//level7.DivisorSubstrings(3003,3)
+	//level7.FindPoisonedDuration([]int{1,2 },2)
+	//level7.MakeGood("abBAcC")
+	//level7.IsThree(14)
+	//level7.CountTriples(5)
 	//level7.CountStudents([]int{1,1,1,0,0,1},[]int{1,0,0,0,1,1})
 	//level7.CheckXMatrix([][]int{{2,0,0,1},{0,3,1,0},{0,5,2,0},{4,0,0,2}})
 	//level7.MinStartValue([]int{1,-2,-3})
