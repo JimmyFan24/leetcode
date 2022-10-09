@@ -1,7 +1,13 @@
 package main
 
+import "leetcode/75daysplan/level7"
+
 func main() {
 
+	level7.KWeakestRows([][]int{{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}}, 3)
+	//level7.AllCellsDistOrder(1,2,0,0)
+	//level7.GreatestLetter("arRAzFif")
+	//level7.NumRookCaptures([][]byte{{'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.',',','.'},{'.','.','.','R','.','.','.','p'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'}})
 	//level7.NumTilePossibilities("AAB")
 	//level7.MaximumXOR([]int{3,2,4,6})
 	//level7.CountHillValley([]int{6,6,5,5,4,1})
