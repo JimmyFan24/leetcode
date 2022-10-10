@@ -4,7 +4,16 @@ import "leetcode/75daysplan/level7"
 
 func main() {
 
-	level7.KWeakestRows([][]int{{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}}, 3)
+	level7.CountMaxOrSubsets([]int{2, 2, 2})
+	//level7.CountTriplets([]int{2,3,1,6,7})
+	//node2 :=&level7.ListNode{Val: 90}
+	//node1 := &level7.ListNode{Val: 100,Next: node2}
+	//level7.SwapNodes(node1,2)
+	//level7.NumOfSubarrays([]int{11,13,17,23,29,31,7,5,2,3},3,5)
+	//level7.CountSubIslands([][]int{{1,1,1,0,0},{0,1,1,1,1},{0,0,0,0,0},{1,0,0,0,0},{1,1,0,1,1}},[][]int{{1,1,1,0,0},{0,0,1,1,1},{0,1,0,0,0},{1,0,1,1,0},{0,1,0,1,0}})
+	//level7.MinSwaps("]]][[[")
+	//level7.FrequencySort("tree")
+	//level7.KWeakestRows([][]int{{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}}, 3)
 	//level7.AllCellsDistOrder(1,2,0,0)
 	//level7.GreatestLetter("arRAzFif")
 	//level7.NumRookCaptures([][]byte{{'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.',',','.'},{'.','.','.','R','.','.','.','p'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'}})
