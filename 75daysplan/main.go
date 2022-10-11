@@ -4,7 +4,9 @@ import "leetcode/75daysplan/level7"
 
 func main() {
 
-	level7.CountMaxOrSubsets([]int{2, 2, 2})
+	level7.PathInZigZagTree(14)
+	//level7.MatrixScore([][]int{{0,1},{1,1}})
+	//level7.CountMaxOrSubsets([]int{2, 2, 2})
 	//level7.CountTriplets([]int{2,3,1,6,7})
 	//node2 :=&level7.ListNode{Val: 90}
 	//node1 := &level7.ListNode{Val: 100,Next: node2}
