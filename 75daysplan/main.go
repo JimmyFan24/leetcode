@@ -4,7 +4,30 @@ import "leetcode/75daysplan/level7"
 
 func main() {
 
-	level7.PathInZigZagTree(14)
+	c := level7.Constructor("abc", 2)
+	c.Next()
+	c.HasNext()
+	c.Next()
+	c.HasNext()
+	//level7.SpiralMatrixIII(5,6,1,4)
+	//level7.DisplayTable([][]string{{"David","3","Ceviche"},{"Corina","10","Beef Burrito"},{"David","3","Fried Chicken"},{"Carla","5","Water"},{"Carla","5","Ceviche"},{"Rous","3","Ceviche"}})
+	//level7.SmallestNumber("IIIDIDDD")
+	//level7.PartitionString("abacaba")
+	/*node13 := &level7.ListNode{Val: 0,}
+	node12 := &level7.ListNode{Val: 5,Next: node13}
+	node11 := &level7.ListNode{Val: 5,Next: node12}
+	node10 := &level7.ListNode{Val: 2,Next: node11}
+	node9:= &level7.ListNode{Val: 4,Next: node10}
+	node8 := &level7.ListNode{Val: 9,Next: node9}
+	node7 := &level7.ListNode{Val: 7,Next: node8}
+	node6 := &level7.ListNode{Val: 1,Next: node7}
+	node5 := &level7.ListNode{Val: 8,Next: node6}
+	node4 := &level7.ListNode{Val: 6,Next: node5}
+	node3 := &level7.ListNode{Val: 2,Next: node4}
+	node2 := &level7.ListNode{Val: 0,Next: node3}
+	node1 := &level7.ListNode{Val: 3,Next: node2}
+	level7.SpiralMatrix(3,5,node1)*/
+	//level7.PathInZigZagTree(14)
 	//level7.MatrixScore([][]int{{0,1},{1,1}})
 	//level7.CountMaxOrSubsets([]int{2, 2, 2})
 	//level7.CountTriplets([]int{2,3,1,6,7})
