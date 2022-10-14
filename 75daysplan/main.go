@@ -4,11 +4,13 @@ import "leetcode/75daysplan/level7"
 
 func main() {
 
-	c := level7.Constructor("abc", 2)
+	level7.CustomSortString("cba", "abcd")
+	//level7.GetSmallestString1(96014,2095650)
+	/*c := level7.Constructor("abc", 2)
 	c.Next()
 	c.HasNext()
 	c.Next()
-	c.HasNext()
+	c.HasNext()*/
 	//level7.SpiralMatrixIII(5,6,1,4)
 	//level7.DisplayTable([][]string{{"David","3","Ceviche"},{"Corina","10","Beef Burrito"},{"David","3","Fried Chicken"},{"Carla","5","Water"},{"Carla","5","Ceviche"},{"Rous","3","Ceviche"}})
 	//level7.SmallestNumber("IIIDIDDD")
