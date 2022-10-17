@@ -1,10 +1,26 @@
 package main
 
-import "leetcode/75daysplan/level7"
+import (
+	"fmt"
+	"leetcode/75daysplan/level7"
+)
 
 func main() {
 
-	level7.CustomSortString("cba", "abcd")
+	c := level7.Constructor1472("aaa")
+	c.Visit("bbb")
+	c.Visit("ccc")
+	c.Visit("ddd")
+	f := c.Back(1)
+	g := c.Back(1)
+	t := c.Forward(1)
+	c.Visit("eee")
+	r := c.Forward(2)
+	m := c.Back(2)
+	u := c.Back(7)
+	fmt.Println(f, g, t, r, m, u)
+	//level7.NumSpecialEquivGroups([]string{"abcd","cdab","cbad","xyzz","zzxy","zzyx"})
+	//level7.CustomSortString("cba", "abcd")
 	//level7.GetSmallestString1(96014,2095650)
 	/*c := level7.Constructor("abc", 2)
 	c.Next()
