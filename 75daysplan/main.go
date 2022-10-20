@@ -1,13 +1,13 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/75daysplan/level7"
-)
+import "leetcode/75daysplan/level8"
 
 func main() {
 
-	c := level7.Constructor1472("aaa")
+	level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
+	//level8.Evaluate("(name)is(age)yearsold",[][]string{{"name","bob"},{"age","two"}})
+	//level8.DailyTemperatures([]int{89,62,70,58,47,47,46,76,100,70})
+	/*c := level7.Constructor1472("aaa")
 	c.Visit("bbb")
 	c.Visit("ccc")
 	c.Visit("ddd")
@@ -18,7 +18,7 @@ func main() {
 	r := c.Forward(2)
 	m := c.Back(2)
 	u := c.Back(7)
-	fmt.Println(f, g, t, r, m, u)
+	fmt.Println(f, g, t, r, m, u)*/
 	//level7.NumSpecialEquivGroups([]string{"abcd","cdab","cbad","xyzz","zzxy","zzyx"})
 	//level7.CustomSortString("cba", "abcd")
 	//level7.GetSmallestString1(96014,2095650)
