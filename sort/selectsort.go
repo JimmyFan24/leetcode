@@ -35,6 +35,6 @@ func main() {
 	//containsDuplicate(arr)
 	//result := majorityElement(arr)
 
-	a := MergerSort(arr)
-	fmt.Println(a)
+	heapSort(arr)
+	fmt.Println(arr)
 }

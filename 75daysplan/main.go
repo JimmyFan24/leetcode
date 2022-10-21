@@ -4,7 +4,23 @@ import "leetcode/75daysplan/level8"
 
 func main() {
 
-	level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
+	level8.MaximumTime("2?:?0")
+	//level8.CountTime(
+	//	"21:08")
+	//level8.CheckStraightLine([][]int{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}})
+	//level8.MinNumberOfHours(5, 3, []int{1, 4}, []int{2, 5})
+	//level8.MaxRepeating("aaabaaaabaaabaaaabaaaabaaaabaaaaba", "aaaba")
+	//level8.ValidPalindrome("aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga")
+	//level8.DestroyTargets([]int{3, 7, 8, 1, 1, 5}, 2)
+	//input := [][]int{{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 1, 1, 0}, {0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 1, 1, 1, 1, 1, 1, 1}, {0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 1, 1, 0}, {0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 1, 1, 1, 1, 1, 1, 1}, {0, 1, 0, 1, 1, 1, 1, 0, 0, 0}, {0, 1, 0, 0, 0, 0, 0, 0, 1, 0}, {0, 1, 1, 1, 1, 1, 1, 0, 1, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 1, 0}}
+
+	//level9.ShortestPath(input, 1)
+	//level9.Two([]int{3, 2, 4}, 6)
+	//weeklycontest.MakeIntegerBeautiful(467, 6)
+	//weeklycontest.MostPopularCreator([]string{"a", "a"}, []string{"aa", "a"}, []int{5, 5})
+	//level9.CanPlaceFlowers([]int{0, 0, 1, 0, 0}, 1)
+	//level9.EqualFrequency("aazz")
+	//level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
 	//level8.Evaluate("(name)is(age)yearsold",[][]string{{"name","bob"},{"age","two"}})
 	//level8.DailyTemperatures([]int{89,62,70,58,47,47,46,76,100,70})
 	/*c := level7.Constructor1472("aaa")
