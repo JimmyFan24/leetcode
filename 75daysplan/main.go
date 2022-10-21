@@ -1,10 +1,14 @@
 package main
 
-import "leetcode/75daysplan/level8"
+import "fmt"
 
 func main() {
 
-	level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
+	ans := 3
+	fmt.Println(ans >> 1)
+	//level8.ConstructFromPrePost([]int{1,2,4,5,3,6,7},[]int{4,5,2,6,7,3,1})
+	//level8.BuildArray([]int{1,2},4)
+	//level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
 	//level8.Evaluate("(name)is(age)yearsold",[][]string{{"name","bob"},{"age","two"}})
 	//level8.DailyTemperatures([]int{89,62,70,58,47,47,46,76,100,70})
 	/*c := level7.Constructor1472("aaa")
