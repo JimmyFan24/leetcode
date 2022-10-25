@@ -1,11 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"leetcode/75daysplan/level8"
+)
 
 func main() {
 
-	ans := 3
-	fmt.Println(ans >> 1)
+	t := level8.SearchMatrix([][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}, 5)
+	fmt.Println(t)
+	//level8.MaximalSquare([][]string{{"0"}}}
+	//level8.MaximalSquare([][]byte{{'1','0'},{'0','1'}})
+	//level8.GetHappyString(3,9)
+	//level8.CreateBinaryTree([][]int{{20,15,1},{20,17,0},{50,20,1},{50,80,0},{80,19,1}})
+	//ans := 3
+	//fmt.Println(ans >> 1)
 	//level8.ConstructFromPrePost([]int{1,2,4,5,3,6,7},[]int{4,5,2,6,7,3,1})
 	//level8.BuildArray([]int{1,2},4)
 	//level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
