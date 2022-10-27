@@ -1,14 +1,22 @@
 package main
 
-import (
-	"fmt"
-	"leetcode/75daysplan/level8"
-)
+import "leetcode/75daysplan/level8"
 
 func main() {
 
-	t := level8.SearchMatrix([][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}, 5)
-	fmt.Println(t)
+	level8.MaxSubsequence([]int{-1, -2, 3, 4}, 3)
+	//level8.CountDaysTogether("10-01","10-31","11-01","12-31")
+	//level8.IsBoomerang([][]int{{0,1},{2,1},{0,0}})1
+	//level8.NumDifferentIntegers("qf120x120o120")
+	//level8.IsLongPressedName("alex","aaleexa")
+	//level8.ValidMountainArray([]int{0,1,2,3,4,5,6,7,8,9})
+	//level8.CanBeIncreasing([]int{105,924,32,968})
+	//level8.DestroyTargets([]int{625879766,235326233,250224393,501422042,683823101,948619719,680305710,733191937,182186779,353350082},4)
+	//
+	//level8.TwoEditWords([]string{"yes",},[]string{"not",})
+	//level8.OddString([]string{"abm","bcn","alm"})
+	//	t := level8.SearchMatrix([][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}, 5)
+	//	fmt.Println(t)
 	//level8.MaximalSquare([][]string{{"0"}}}
 	//level8.MaximalSquare([][]byte{{'1','0'},{'0','1'}})
 	//level8.GetHappyString(3,9)
