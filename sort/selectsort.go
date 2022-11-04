@@ -24,7 +24,7 @@ func swap(arr []int, num1 int, num2 int) {
 }
 
 func main() {
-	arr := []int{3, 2, 4, 4, 5, 9, 1, 6}
+	arr := []int{7, 6, 5, 4}
 	//	selectSort(arr)
 	//sum := rescursionSort(arr,0,len(arr)-1)
 	//leftZoom := -1
@@ -35,6 +35,6 @@ func main() {
 	//containsDuplicate(arr)
 	//result := majorityElement(arr)
 
-	heapSort(arr)
+	selectSort(arr)
 	fmt.Println(arr)
 }
