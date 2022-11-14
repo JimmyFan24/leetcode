@@ -1,24 +1,47 @@
 package main
 
-import (
-	"leetcode/weeklycontest"
-)
+import "leetcode/75daysplan/level8"
 
 func main() {
-	weeklycontest.LongestPalindrome("ac")
-	//	level9.Maximum69Number(9669)
-	//weeklycontest.TotalCost([]int{31, 25, 72, 79, 74, 65, 84, 91, 18, 59, 27, 9, 81, 33, 17, 58}, 11, 2)
-	//level9.FindClosestNumber([]int{-4, -2, 1, 4, 8})
 
-	//level9.MostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", []string{"hit"})
-	/*node3 := &level9.TreeNode{Val: 5}
-	node2 := &level9.TreeNode{Val: 5}
-	node1 := &level9.TreeNode{Left: node2, Right: node3, Val: 8}
+	level8.MaxSubsequence([]int{-1, -2, 3, 4}, 3)
+	//level8.CountDaysTogether("10-01","10-31","11-01","12-31")
+	//level8.IsBoomerang([][]int{{0,1},{2,1},{0,0}})1
+	//level8.NumDifferentIntegers("qf120x120o120")
+	//level8.IsLongPressedName("alex","aaleexa")
+	//level8.ValidMountainArray([]int{0,1,2,3,4,5,6,7,8,9})
+	//level8.CanBeIncreasing([]int{105,924,32,968})
+	//level8.DestroyTargets([]int{625879766,235326233,250224393,501422042,683823101,948619719,680305710,733191937,182186779,353350082},4)
+	//
+	//level8.TwoEditWords([]string{"yes",},[]string{"not",})
+	//level8.OddString([]string{"abm","bcn","alm"})
+	//	t := level8.SearchMatrix([][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}, 5)
+	//	fmt.Println(t)
+	//level8.MaximalSquare([][]string{{"0"}}}
+	//level8.MaximalSquare([][]byte{{'1','0'},{'0','1'}})
+	//level8.GetHappyString(3,9)
+	//level8.CreateBinaryTree([][]int{{20,15,1},{20,17,0},{50,20,1},{50,80,0},{80,19,1}})
+	//ans := 3
+	//fmt.Println(ans >> 1)
+	//level8.ConstructFromPrePost([]int{1,2,4,5,3,6,7},[]int{4,5,2,6,7,3,1})
+	//level8.BuildArray([]int{1,2},4)
 
-	level9.FindSecondMinimumValue(node1)*/
-	//level9.FindMaxAverage([]int{1, 12, -5, -6, 50, 3}, 4)
-	//level9.CanThreePartsEqualSum([]int{1, -1, 1, -1})
-	//level8.FindErrorNums([]int{3, 2, 3, 4, 6, 5})
+	level8.MaximumTime("2?:?0")
+	//level8.CountTime(
+	//	"21:08")
+	//level8.CheckStraightLine([][]int{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}})
+	//level8.MinNumberOfHours(5, 3, []int{1, 4}, []int{2, 5})
+	//level8.MaxRepeating("aaabaaaabaaabaaaabaaaabaaaabaaaaba", "aaaba")
+	//level8.ValidPalindrome("aguokepatgbnvfqmgmlcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupuculmgmqfvnbgtapekouga")
+	//level8.DestroyTargets([]int{3, 7, 8, 1, 1, 5}, 2)
+	//input := [][]int{{0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 1, 1, 0}, {0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 1, 1, 1, 1, 1, 1, 1}, {0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 1, 1, 1, 1, 1, 1, 0}, {0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 1, 1, 1, 1, 1, 1, 1}, {0, 1, 0, 1, 1, 1, 1, 0, 0, 0}, {0, 1, 0, 0, 0, 0, 0, 0, 1, 0}, {0, 1, 1, 1, 1, 1, 1, 0, 1, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 1, 0}}
+
+	//level9.ShortestPath(input, 1)
+	//level9.Two([]int{3, 2, 4}, 6)
+	//weeklycontest.MakeIntegerBeautiful(467, 6)
+	//weeklycontest.MostPopularCreator([]string{"a", "a"}, []string{"aa", "a"}, []int{5, 5})
+	//level9.CanPlaceFlowers([]int{0, 0, 1, 0, 0}, 1)
+	//level9.EqualFrequency("aazz")
 	//level8.SuggestedProducts([]string{"mobile", "mouse", "moneypot", "monitor", "mousepad"}, "mouse")
 	//level8.Evaluate("(name)is(age)yearsold",[][]string{{"name","bob"},{"age","two"}})
 	//level8.DailyTemperatures([]int{89,62,70,58,47,47,46,76,100,70})
