@@ -1,16 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func selectSort(arr []int) {
 
 	//[1,5,4,3,8,2,6]
 	//[1,4,5,3,8,2,6]
-	for i := 1; i < len(arr); i++ {
-		for j := i - 1; j >= 0 && arr[j] > arr[j+1]; j-- {
-			swap(arr, j, j+1)
+	for i := 0; i < len(arr)-1; i++ {
+		min := i
+		for j := i + 1; j < len(arr); j++ {
+			if arr[min] > arr[j] {
+				min = j
+			}
 		}
-
+		arr[min], arr[i] = arr[i], arr[min]
 	}
 
 }
@@ -24,7 +29,7 @@ func swap(arr []int, num1 int, num2 int) {
 }
 
 func main() {
-	arr := []int{7, 6, 5, 4}
+	arr := []int{7, 9, 6, 5, 4}
 	//	selectSort(arr)
 	//sum := rescursionSort(arr,0,len(arr)-1)
 	//leftZoom := -1
@@ -35,6 +40,6 @@ func main() {
 	//containsDuplicate(arr)
 	//result := majorityElement(arr)
 
-	selectSort(arr)
+	insertSort(arr)
 	fmt.Println(arr)
 }
